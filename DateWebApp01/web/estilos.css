@@ -1,0 +1,42 @@
+#form-reservation{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'courier';
+    color: white;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    padding: 5px 7px 5px 5px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    padding: 6px 8px 6px 6px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 2px 2px;
+    border-color: white;
+    background: black;
+    color: white;
+}
+
+select {
+    padding: 6px 8px 6px 6px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 2px 2px;
+    border-color: white;
+}
+
+input[type="text"] {
+    padding: 6px 8px 6px 6px;
+    border-radius: 5px;
+}
