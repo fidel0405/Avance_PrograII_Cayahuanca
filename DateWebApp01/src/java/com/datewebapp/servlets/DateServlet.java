@@ -16,8 +16,18 @@ public class DateServlet extends HttpServlet
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
+            
+            
     {
+        String strFormId = request.getParameter("formid");
         
+        if(strFormId.equals("0"))
+        {
+         response.sendRedirect("Dateform.jsp");
+        }
+        
+        if(strFormId.equals("1"))
+        {
         String name=request.getParameter("name");
         String dia=request.getParameter("dia");
         String servicio=request.getParameter("servicio");
@@ -35,7 +45,7 @@ public class DateServlet extends HttpServlet
         //redirigir la info guardada hacia una jsp
         response.sendRedirect("dateResult.jsp");
     }
-
+    }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
