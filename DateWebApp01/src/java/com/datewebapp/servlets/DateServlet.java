@@ -22,9 +22,12 @@ public class DateServlet extends HttpServlet
         String dia=request.getParameter("dia");
         String servicio=request.getParameter("servicio");
         String lugar=request.getParameter("lugar");
+        String telefono=request.getParameter("telefono");
+        String apellido=request.getParameter("apellido");
+        String dui=request.getParameter("dui");
         
         //crear clase POJO para guardar info para luego poder utilizarla
-        DateObj date = new DateObj(name, dia, servicio, lugar);
+        DateObj date = new DateObj(name, dia, servicio, lugar,telefono, apellido, dui);
         
         //vamos a guardar el objeto date en session de java
         request.getSession().setAttribute("dateobj", date);

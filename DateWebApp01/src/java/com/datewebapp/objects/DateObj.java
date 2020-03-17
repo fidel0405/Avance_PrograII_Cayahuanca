@@ -1,52 +1,81 @@
 package com.datewebapp.objects;
 
-public class DateObj 
+public final class DateObj 
 {
     //variables de instancia
     private String nombre;
-    private String día;
+    private String dia;
     private String servicio;
     private String lugar;
+    private String apellido;
+    private String telefono;
+    private String dui;
     
-    //contrusctor de la clase
-    public DateObj(String nombre, String dia, String servicio, String lugar) {
-        setName(nombre);
-        setTime(dia);
-        setActivity(servicio);
-        setPlace(lugar);
+    public DateObj(String name, String dia, String servicio, String lugar, String telefono, String apellido, String dui) {
+        setNombre(name);
+        setDia(dia);
+        setServicio(servicio);
+        setLugar(lugar);
+        setApellido(apellido);
+        setTelefono(telefono);
+        setDui(dui);
     }
-    
-    //crear métodos get y set para cada variable de instancia
-    public String getName() {
+
+    public String getNombre() {
         return nombre;
     }
 
-    private void setName(String Nombre) {
-        this.nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getTime() {
-        return día;
+    public String getDia() {
+        return dia;
     }
 
-    private void setTime(String día) {
-        this.día = día;
+    public void setDia(String dia) {
+        this.dia = dia;
     }
 
-    public String getActivity() {
+    public String getServicio() {
         return servicio;
     }
 
-    private void setActivity(String servicio) {
+    public void setServicio(String servicio) {
         this.servicio = servicio;
     }
 
-    public String getPlace() {
+    public String getLugar() {
         return lugar;
     }
 
-    private void setPlace(String lugar) {
+    public void setLugar(String lugar) {
         this.lugar = lugar;
     }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDui() {
+        return dui;
+    }
+
+    public void setDui(String dui) {
+        this.dui = dui;
+    }
+    
     
 }

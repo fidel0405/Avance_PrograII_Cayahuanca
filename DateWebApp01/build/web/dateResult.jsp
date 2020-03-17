@@ -14,11 +14,13 @@
     %>
     
     <body>
-        <h1>Date result</h1>
+        <h1>Cita agendada</h1>
         <br>
-        <p>Name: <%= date.getName()%></p><br>
-        <p>Time: <%= date.getTime()%></p><br>
-        <p>Activity: <%= date.getActivity()%></p><br>
-        <p>Lugar: <%= date.getPlace()%></p><br>
+        Enhora buena <%= date.getNombre()%><br><br>
+        Has agendado una cita para el dia <%= date.getDia()%> 
+        <br><br>
+        Pronto uno de nuestros coloboradores se pondrá en contacto contigo
+        <br><br>
+        Gracias por usar ASFA Nailed It!
     </body>
 </html>
