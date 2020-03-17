@@ -16,7 +16,7 @@
     <body>
         <h1>Cita agendada</h1>
         <br>
-        Enhora buena <%= date.getNombre()%><br><br>
+        Enhorabuena <%= date.getNombre()%><br><br>
         Has agendado una cita para el dia <%= date.getDia()%> 
         <br><br>
         Pronto uno de nuestros coloboradores se pondrá en contacto contigo
