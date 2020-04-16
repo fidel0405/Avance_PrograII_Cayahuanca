@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>Welcome page Asfa.nailedit!</h1>
+        <br><br>
+        
+        <form action="UserServlet" method="post">
+            
+            user:<br> 
+            <input type="text" name="user" required />
+            <br><br>
+            password: <br>
+            <input type="password" name="password" required />
+            <br><br>
+            <input type="submit" value="Log In" />
+            <input type="hidden" name="formid" value="1" />
+            
+        </form>
+        
+</html>
