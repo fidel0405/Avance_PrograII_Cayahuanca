@@ -1,45 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it!</title>
+        <title>Login Main</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
     <body>
-        <h1>Citas </h1>
-        <br>
+        <h1>Welcome page Asfa.nailedit!</h1>
+        <br><br>
         
-        <form id="form" name="form" action="DateServlet" method="get">
-            Nombre: <input type="text" id="name" name="name"/>
+        <form action="UserServlet" method="post">
+            
+            user:<br> 
+            <input type="text" name="user" required />
             <br><br>
-            Día
-            <select Id="dia" name="dia">
-            <option Id="lunes" name="lunes" value="lunes">Lunes</option>
-            <option Id="martes" name="martes" value="martes">Martes</option>
-            <option Id="miercoles" name="miercoles" value="miercoles">Miercoles</option>
-            <option Id="jueves" name="jueves" value="jueves">Jueves</option>
-            <option Id="viernes" name="viernes" value="viernes">Viernes</option>
-            </select>
+            password: <br>
+            <input type="password" name="password" required />
             <br><br>
-            Servicio
-              <select Id="servicio" name="servicio">
-            <option id="maquillaje" name="maquillaje" value="maquillaje">Maquillaje permanente</option>
-            <option id="acrilico" name="acrilico" value="acrilico">Set de uñas acrilicas</option>
-            <option id="baño" name="baño" value="baño">Baño de acrilico</option>
-            <option id="retiroa" name="retiroa" value="retiroa">Retiro de uñas acrilicas</option>
-            <option id="retirom" name="retirom" value="retirom">Retiro de esmalte</option>
-            <option>Other</option>
-              </select>
-            <br><br>
-             Lugar: <br>
-            <input type="radio" id="ESEN" name="lugar" value="ESEN" checked="checked">
-            <label for="female">ESEN</label><br>
-            <input type="radio" id="SM" name="lugar" value="SM">
-            <label for="male">San Miguel</label><br>
-            <input type="radio" id="domicilio" name="lugar" value="domicilio">
-            <label for="other">domicilio</label>
-            <br><br>
-            <input type="submit" id="mysubmit" name="mysubmit" value="Send"/>
+            <input type="submit" value="Log In" />
+            <input type="hidden" name="formid" value="1" />
+            
         </form>
-    </body>
+        
 </html>
