@@ -4,15 +4,14 @@ CREATE TABLE `usuariosweb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
   `apellido` VARCHAR(20) NOT NULL,
-  `birthday` DATE NOT NULL,
+  `age` INT NOT NULL,
   `email` VARCHAR(60) NOT NULL,
-  `user` VARCHAR(10) NOT NULL,
   `password` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`));
 
 
 INSERT INTO usuariosweb.usuarios
-(id, name, lastname, birthday, email, user, password)
+(id, name, lastname, age, email, user, password)
 VALUES
-(0,'Carlos','Orellana','1999-08-12','robertosiete2@gmail.com','carlos12','carlos123');
+(0,'Carlos','Orellana',20,'robertosiete2@gmail.com','carlos123');
 
