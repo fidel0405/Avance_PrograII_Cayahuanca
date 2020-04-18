@@ -7,20 +7,9 @@
         
     </head>
     <body>
-
-//barra de arriba
-
-
-
-
-
-
-        <h1>Agendar cita </h1>
-        <br>
-=======
         <h1>Welcome page Asfa.nailedit!</h1>
         <br><br>
- 
+        
         <form action="UserServlet" method="post">
             
             user:<br> 
@@ -33,10 +22,5 @@
             <input type="hidden" name="formid" value="1" />
             
         </form>
-
-        //footer
-    </body>
-=======
         
-
 </html>
