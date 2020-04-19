@@ -1,48 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ASFA Nailed it!</title>
-        <link rel="shortcut icon" href="images/Logo.png">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+  <head>
+    <title>ASFA Nailed it!</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    <body>
 
-     <body>
-      <div align="center">
-
-        <img src="images/Logo.png" style="width:15%" >
-
-      </div>
+      <h1 style=" font-size: 73px;color: darkturquoise;text-align: center;font-family: century gothic;">ASFA Nailed it!</h1>
       <br>
-      <br>
+      <h1 style=" font-size: 20px;font-family: century gothic; text-align:center;"> Descubre todos los servicios y productos alta de calidad que te ofrecemos. <br> Todos nustros servicios se realizan con los mejores productos en el mercado <br> para lograr grandes resultados. Entra y descubre.</h1>
+      
+      <div>
+        <hr>
 
-      <div align="center">
-         <table   border="1" cellspacing="15"  style="width:85%" >
+         <table align="center">
           <tr>
-            <th>Esmalte permanente</th>
-            <th>Set uñas acrílicas</th>
-          </tr>
-          <tr>
-            <td>Retiro de acrílico</td>
-            <td>Baño de uñas acrílicas</td>
-          </tr>
-          <tr>
-            <td>Retiro de gel</td>
-            <td>Contáctame</td> 
+              <td><a href="">Inicio </a></td>
+              <td><a href="">Esmaltes </a></td>
+              <td><a href="">Acrílicos </a></td>
+              <td><a href="">Set Uñas Acrílicas </a></td>
           </tr> 
-                
-          
          </table>
-
       </div>
-
-    <div>  
-        <br><br>
-        <form method="get" action="DateServlet" >
-            <input type="submit" value="Agendar cita" />
-            <input type="hidden" name="formid" value="0" />
+        
+        <form id="form-reservation" name="form" action="DateServlet" method="get">
+            <h1>Agendar cita </h1>
+            <br>
+            Nombre: <input type="text" id="name" name="name"/>
+            <br><br>
+            Día
+            <select id="dia" name="dia">
+            <option id="lunes" name="lunes" value="lunes">Lunes</option>
+            <option id="martes" name="martes" value="martes">Martes</option>
+            <option id="miercoles" name="miercoles" value="miercoles">Miercoles</option>
+            <option id="jueves" name="jueves" value="jueves">Jueves</option>
+            <option id="viernes" name="viernes" value="viernes">Viernes</option>
+            </select>
+            <br><br>
+            Servicio
+              <select id="servicio" name="servicio">
+            <option id="maquillaje" name="maquillaje" value="maquillaje">Maquillaje permanente</option>
+            <option id="acrilico" name="acrilico" value="acrilico">Set de uñas acrilicas</option>
+            <option id="baño" name="baño" value="baño">Baño de acrilico</option>
+            <option id="retiroa" name="retiroa" value="retiroa">Retiro de uñas acrilicas</option>
+            <option id="retirom" name="retirom" value="retirom">Retiro de esmalte</option>
+            <option>Other</option>
+              </select>
+            <br><br>
+            
+             Lugar: <br>
+            <input type="radio" id="ESEN" name="lugar" value="ESEN" checked="checked">
+            <label for="female">ESEN</label><br>
+            <input type="radio" id="SM" name="lugar" value="SM">
+            <label for="male">San Miguel</label><br>
+            <input type="radio" id="domicilio" name="lugar" value="domicilio">
+            <label for="other">domicilio</label>
+            <br><br>
+            
+            <input type="submit" id="mysubmit" name="mysubmit" value="send"/>
+            
         </form>
-    </div>
 
-      </body>
+        <footer>
+          <div class="container-footer-all">
+          
+              <div class="container-body">
+                  
+                  <div class="column1">
+                      <h1>ASFA Nailed it!</h1>
+
+                      <div class="row">
+                          <a><i class="fab fa-facebook"></i></a>
+                          <label>Síguenos en Facebook</label>
+                      </div>
+                      
+                      <div class="row">
+                          <a href="https://www.instagram.com/asfa.nailedit/?hl=es-la"><i class="fab fa-instagram" ></i></a>
+                          <a href="https://www.instagram.com/asfa.nailedit/?hl=es-la"><label >Síguenos en Instagram</label></a>
+                      </div>
+                  </div>
+
+                  <div class="column2">
+                      <h1>Servicios</h1>
+                      <div class="row">
+                          <label>Esmaltado Gel</label>
+                      </div>
+      
+                      <div class="row">
+                          <label>Acrílicos</label>
+                      </div>
+                      
+                      <div class="row">
+                          <label>Uñas Acrílicas</label>
+                      </div>
+
+                  </div>
+
+                  <div class="column3">
+                      <h1>Información</h1>
+                      <div class="row">
+                          <i class="fas fa-phone"></i>
+                          <label>Número de teléfono</label>
+                          <br>
+                          <p>+503 1234-5678<p>
+                      </div>
+                      
+                      <div class="row">
+                          <i class="fas fa-envelope"></i>
+                          <label>Correo Electrónico</label>
+                          <br>
+                          <a href="mailto:asfa.nailed@gmail.com"><p>asfa.nailed@gmail.com</p></a>
+                      </div>
+
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="container-footer">
+
+              <div class="information">
+                  <br>
+                  <p>ASFA Nailed it! 2020 | Diseñado por Cayahuanca</p>
+                  
+          </div>
+      
+
+      </footer>
+
+        
+    </body>
 </html>
