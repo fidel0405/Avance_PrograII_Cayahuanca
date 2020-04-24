@@ -60,6 +60,27 @@ public class UserServlet extends HttpServlet {
             }
         }
         
+        //ahora trabajaremos la parte de register
+        
+        if (strFormId.equals("2"))
+        {
+            //registrar usuario
+            //necesito todos los datos del form de registro
+            String strName = request.getParameter("name");
+            String strLastname = request.getParameter("lastname");
+            String strAge = request.getParameter("age");
+            int iAge = Integer.parseInt(strAge);
+            String strEmail = request.getParameter("email");
+            String strUser = request.getParameter("user");
+            String strPassword = request.getParameter("password");
+            
+            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
+            
+            request.getRequestDispatcher("index.html")
+                   .forward(request, response);
+            
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
