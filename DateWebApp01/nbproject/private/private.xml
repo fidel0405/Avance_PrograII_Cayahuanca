@@ -2,6 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/objects/DateObj.java</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/servlets/UserServlet.java</file>
@@ -12,5 +15,6 @@
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/logic/UserLogic.java</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/objects/UserObj.java</file>
         </group>
+>>>>>>> f332dfde405e8502075ad35a8c7b653366c1d8a1
     </open-files>
 </project-private>

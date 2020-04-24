@@ -17,7 +17,7 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException 
     {
         //conexion a la bd en la compu de carlos asfabd
-        String connString = "jdbc:mysql://localhost:3306/sistemax?"
+        String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
                                 + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
@@ -57,6 +57,27 @@ public class UserServlet extends HttpServlet {
                 request.getRequestDispatcher("errorMessage.jsp")
                        .forward(request, response);
             }
+        }
+        
+        //ahora trabajaremos la parte de register
+        
+        if (strFormId.equals("2"))
+        {
+            //registrar usuario
+            //necesito todos los datos del form de registro
+            String strName = request.getParameter("name");
+            String strLastname = request.getParameter("lastname");
+            String strAge = request.getParameter("age");
+            int iAge = Integer.parseInt(strAge);
+            String strEmail = request.getParameter("email");
+            String strUser = request.getParameter("user");
+            String strPassword = request.getParameter("password");
+            
+            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
+            
+            request.getRequestDispatcher("index.html")
+                   .forward(request, response);
+            
         }
         
     }
