@@ -14,7 +14,7 @@
     <body>
         <h1>Registrate</h1>
         
-        <form action="UserServlet" method="post">
+        <form action="UserServlet" class="formulario" method="post">
             
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
