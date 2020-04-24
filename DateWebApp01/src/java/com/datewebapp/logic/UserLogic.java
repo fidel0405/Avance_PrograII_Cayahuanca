@@ -1,4 +1,4 @@
-package com.asfaapp01.logic;
+package com.datewebapp.logic;
 
 import balcorpfw.database.DatabaseX;
 import balcorpfw.logic.Logic;
