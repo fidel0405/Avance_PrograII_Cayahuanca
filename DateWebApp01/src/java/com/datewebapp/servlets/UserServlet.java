@@ -1,7 +1,7 @@
-package com.asfaapp01.servlets;
+package com.datewebapp.servlets;
 
-import com.asfaapp01.logic.UserLogic;
-import com.asfaapp01.objects.UserObj;
+import com.datewebapp.logic.UserLogic;
+import com.datewebapp.objects.UserObj;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

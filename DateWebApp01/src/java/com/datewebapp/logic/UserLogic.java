@@ -1,8 +1,8 @@
-package com.asfaapp01.logic;
+package com.datewebapp.logic;
 
 import balcorpfw.database.DatabaseX;
 import balcorpfw.logic.Logic;
-import com.asfaapp01.objects.UserObj;
+import com.datewebapp.objects.UserObj;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
