@@ -67,5 +67,17 @@ public class UserLogic extends Logic
       //3. devolver la informacion del usuario si esta
       return CUserInDB; 
    }
+   
+   public boolean insertUser(String p_strName, String p_strLastname, int p_iAge, 
+                            String p_strEmail, String p_strUser, String p_strPassword)  
+    {
+        boolean hasFailed;
+        DatabaseX database = getDatabase();
+        String strSql = "INSERT INTO usuariosweb.usuarios"
+                + "(id, name, lastname, age, email, user, password) "
+                + "VALUES(0,'"+p_strName+"','"+p_strLastname+"','"+p_iAge+"','"+p_strEmail+"','"+p_strUser+"','"+p_strPassword+"');";
+        hasFailed = database.executeNonQueryBool(strSql);
+        return hasFailed;
+    }
            
 }

@@ -14,29 +14,32 @@
     <body>
         <h1>Registrate</h1>
         
-        <form action="UserServlet" method="post">
+        <form action="UserServlet" class="formulario" method="post">
             
             Nombre:<br> 
-            <input type="text" name="name" required />
+            <input type="text" name="name" class="datos" required />
             <br><br>
             Apellido:<br> 
-            <input type="text" name="lastname" required />
+            <input type="text" name="lastname" class="datos" required />
             <br><br>
             Edad:<br> 
-            <input type="number" name="age" required />
+            <input type="number" name="age" class="datos" required />
             <br><br>
             Correo:<br> 
-            <input type="email" name="email" required />
+            <input type="email" name="email" class="datos" required />
             <br><br>
             user:<br> 
-            <input type="text" name="user" required />
+            <input type="text" name="user" class="datos" required />
             <br><br>
             password: <br>
-            <input type="password" name="password" required />
+            <input type="password" name="password" class="datos" required />
+            <br><br>
+            confirm password: <br>
+            <input type="password" name="password" class="datos" required />
             <br><br>
             
             
-            <input type="submit" value="Register" />
+            <input type="submit" class="boton" value="Register" />
             <input type="hidden" name="formid" value="2" />
             
             <br><br>            
