@@ -4,15 +4,43 @@ CREATE TABLE `usuariosweb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
   `apellido` VARCHAR(20) NOT NULL,
-  `birthday` DATE NOT NULL,
+  `age` INT NOT NULL,
   `email` VARCHAR(60) NOT NULL,
-  `user` VARCHAR(10) NOT NULL,
   `password` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`));
 
 
 INSERT INTO usuariosweb.usuarios
-(id, name, lastname, birthday, email, user, password)
+(id, name, lastname, age, email, user, password)
 VALUES
-(0,'Carlos','Orellana','1999-08-12','robertosiete2@gmail.com','carlos12','carlos123');
+(0,'Carlos','Orellana',20,'robertosiete2@gmail.com','carlos123');
 
+CREATE TABLE `usuariosweb`.`imagenes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(145) NOT NULL,
+  `tipo` VARCHAR(145) NOT NULL,
+  `image` VARCHAR(145) NOT NULL,
+  PRIMARY KEY (`id`));
+
+SELECT * FROM usuariosweb.imagenes;
+
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'1_A','Acrilicos','1_A.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'2_A','Acrilicos','2_A.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'3_A','Acrilicos','3_A.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'4_A','Acrilicos','4_A.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'5_A','Acrilicos','5_A.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_A','Acrilicos','6_A.jpg');
+
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'1_MP','Maquillaje Permanente','1_MP.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'2_MP','Maquillaje Permanente','2_MP.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'3_MP','Maquillaje Permanente','3_MP.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'4_MP','Maquillaje Permanente','4_MP.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'5_MP','Maquillaje Permanente','5_MP.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_MP','Maquillaje Permanente','6_MP.jpg');
+
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'1_TN','Tonos Nude','1_TN.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'2_TN','Tonos Nude','2_TN.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'3_TN','Tonos Nude','3_TN.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'4_TN','Tonos Nude','4_TN.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'5_TN','Tonos Nude','5_TN.jpg');
+INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_TN','Tonos Nude','6_TN.jpg');
