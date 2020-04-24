@@ -18,7 +18,7 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException 
     {
         //conexion a la bd en la compu de carlos asfabd
-        String connString = "jdbc:mysql://localhost:3306/sistemax?"
+        String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
                                 + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
