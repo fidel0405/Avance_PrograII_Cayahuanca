@@ -4,7 +4,7 @@
     Author     : carlos
 --%>
 
-<%@page import="com.asfaapp01.objects.UserObj"%>
+<%@page import="com.datewebapp.objects.UserObj"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
