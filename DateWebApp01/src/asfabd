@@ -3,17 +3,18 @@ CREATE SCHEMA `usuariosweb` ;
 CREATE TABLE `usuariosweb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
-  `apellido` VARCHAR(20) NOT NULL,
+  `lastname` VARCHAR(20) NOT NULL,
   `age` INT NOT NULL,
   `email` VARCHAR(60) NOT NULL,
+  `user` VARCHAR(45) NOT NULL,
   `password` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`));
 
 
-INSERT INTO usuariosweb.usuarios
+INSERT INTO usuariosweb.usuariosx
 (id, name, lastname, age, email, user, password)
 VALUES
-(0,'Carlos','Orellana',20,'robertosiete2@gmail.com','carlos123');
+(0,'Carlos','Orellana',20,'robertosiete2@gmail.com','elidiota','carlos123');
 
 CREATE TABLE `usuariosweb`.`imagenes` (
   `id` INT NOT NULL AUTO_INCREMENT,
