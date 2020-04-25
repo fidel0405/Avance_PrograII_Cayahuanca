@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="CSS/estilosFormularios.css">
     </head>
     <body>
-        <h1>Registrate</h1>
+        <br>
+        <h1 class="titulo">Registrate</h1>
         
         <form action="UserServlet" class="formulario" method="post">
             
@@ -32,15 +33,15 @@
             user:<br> 
             <input type="text" name="user" class="datos" required />
             <br><br>
-            password: <br>
+            Contraseña: <br>
             <input type="password" name="password" class="datos" required />
             <br><br>
-            confirm password: <br>
+            Confirmar contraseña: <br>
             <input type="password" name="password" class="datos" required />
             <br><br>
             
             
-            <input type="submit" class="boton" value="Register" />
+            <input type="submit" class="boton" value="Registrate" />
             <input type="hidden" name="formid" value="2" />
             
             <br><br>            

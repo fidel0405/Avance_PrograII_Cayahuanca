@@ -8,28 +8,22 @@
         
     </head>
     <body>
-
-//barra de arriba
-
-
-        <h1>Agendar cita </h1>
         <br>
-=======
-        <h1>Welcome page Asfa.nailedit!</h1>
-        <br><br>
+        <h1 class="titulo">Bienvenido a Asfa.nailedit!</h1>
  
-        <form action="UserServlet" method="post">
+        <form action="UserServlet" class="formulario" method="post">
             
-            user:<br> 
-            <input type="text" name="user" required />
+            Usuario:<br> 
+            <input type="text" name="user" class="datos" required />
             <br><br>
-            password: <br>
-            <input type="password" name="password" required />
+            Contraseña: <br>
+            <input type="password" name="password" class="datos" required />
             <br><br>
-            <input type="submit" value="Log In" />
+            <input type="submit" class="boton" value="Log In" />
             <input type="hidden" name="formid" value="1" />
             
         </form>
+        <br><br>
         
         <p>¿No tienes cuenta? <a href="register.jsp">registrate</a></p>
 
