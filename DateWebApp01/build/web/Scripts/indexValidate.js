@@ -10,7 +10,7 @@ $().ready(function(){
             
             password:{
                 required: true,
-                minlength: 8
+                minlength: 5
             }
             
             
@@ -22,7 +22,7 @@ $().ready(function(){
             },
             password:{
                 required: " Completa este campo ",
-                minlength: " La contraseña tiene al menos 8 caracteres"
+                minlength: " La contraseña tiene al menos 5 caracteres"
             }
         }
     });
