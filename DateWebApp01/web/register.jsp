@@ -134,7 +134,11 @@
                     <br>
                     <p>ASFA Nailed it! 2020 | Diseñado por Cayahuanca</p>
                     
+           </div>
             </div>
+        
+
+        </footer>
         
         
     </body>
