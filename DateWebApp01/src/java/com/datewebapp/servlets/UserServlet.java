@@ -1,8 +1,11 @@
 package com.datewebapp.servlets;
 
 import com.datewebapp.logic.UserLogic;
+import com.datewebapp.objects.ServicioObj;
+import com.datewebapp.logic.ServicioLogic;
 import com.datewebapp.objects.UserObj;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,6 +45,11 @@ public class UserServlet extends HttpServlet {
             //verificacion
             if(CLoginUser!=null)
             {
+                //Vamos a mostrar los productos de nuestros servicios
+                
+                ServicioLogic CServicioLogic = new ServicioLogic();
+                List<ServicioObj> CList= CServicioLogic.getAllServicios();
+                
                 //el metodo devolvio informacion 
                 request.getSession().setAttribute("logged_user", CLoginUser);
                 
