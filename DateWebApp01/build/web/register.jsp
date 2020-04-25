@@ -18,7 +18,7 @@
         
     <body>
         <br>
-        <div align="center"> <img src="imagenes/Logo.png" alt="logo" id="logo"></div>
+        <div align="center"> <img src="imagenes/logo.jpeg" alt="logo" id="logo"></div>
         
         <div class="izquierda">
             <img src="imagenes/1_A.jpeg" alt="prueba1">
