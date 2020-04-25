@@ -47,8 +47,8 @@ public class UserServlet extends HttpServlet {
             {
                 //Vamos a mostrar los productos de nuestros servicios
                 
-                ServicioLogic CServicioLogic = new ServicioLogic();
-                List<ServicioObj> CList= CServicioLogic.getAllServicios();
+                //ServicioLogic CServicioLogic = new ServicioLogic();
+                //List<ServicioObj> CList= CServicioLogic.getAllServicios();
                 
                 //el metodo devolvio informacion 
                 request.getSession().setAttribute("logged_user", CLoginUser);
