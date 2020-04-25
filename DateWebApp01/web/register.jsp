@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Page</title>
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
+        <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
         <link rel="stylesheet" href="CSS/estilosFormularios.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,11 +135,12 @@
                     <br>
                     <p>ASFA Nailed it! 2020 | Diseñado por Cayahuanca</p>
                     
-           </div>
+            </div>
             </div>
         
-
+        
         </footer>
+
         
         
     </body>

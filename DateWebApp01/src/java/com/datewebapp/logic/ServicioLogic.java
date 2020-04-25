@@ -1,4 +1,3 @@
-
 package com.datewebapp.logic;
 
 import balcorpfw.logic.Logic;
