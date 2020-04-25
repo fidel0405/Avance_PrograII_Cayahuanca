@@ -24,6 +24,11 @@ body{
     background: #333;
     color: white;
     padding: 2 rem 0;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .header a{
@@ -44,6 +49,7 @@ body{
             display: block;
             padding: 0.5rem 1rem;
             transition: all 0.4s linear;
+            border-radius: 5px;
         }
 
             .navigation ul li a:hover{
@@ -54,10 +60,48 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-icon{
+    display: none;
+}
+
+main{
+    padding-top: 10rem;
+}
+
+
+
+.images{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.images ul li img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+
+}
+
+.images ul{
+    list-style: none;
+}
+
+.images ul li{
+    width: 30%;
+    float: left;
+    border: 1px solid gray;
+    text-align: center;
+    margin: 9px;
 }
 
 footer{
     margin: 0px;
+    margin-top: 10px;
     padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -140,7 +184,52 @@ footer{
     
 }
 
-@media screen and (max-width: 1100px){
+@media only screen and (max-width: 767px){
+    
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+        .navigation ul li{
+            display: block;
+        }
+            .navigation ul li a{
+                display: block;
+                padding: 0.5rem 0;
+                transition: all 0.4s linear;
+                border-radius: 5px;
+            }
+    
+                .navigation ul li a:hover{
+                background: gray;
+                }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .container-body{
         flex-wrap: wrap;
     }
