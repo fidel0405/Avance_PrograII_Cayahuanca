@@ -48,10 +48,10 @@
             <input type="text" name="user" class="datos" required />
             <br>
             Contraseña: <br>
-            <input type="password" name="password" class="datos" required />
+            <input type="password" name="password" class="datos" id="password" required />
             <br>
             Confirmar contraseña: <br>
-            <input type="password" name="password" class="datos" required />
+            <input type="password" name="password" class="datos" id="confirm_password" required />
             <br><br>
             
             
@@ -140,8 +140,8 @@
         
         
         </footer>
-
         
+        <script src="Scripts/passwordConfirm.js" type="text/javascript"></script>        
         
     </body>
 </html>
