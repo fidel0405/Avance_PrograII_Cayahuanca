@@ -37,7 +37,7 @@
                       CTemp = ite.next();
           %>  
                 <tr>
-                    <td><img src="images/<%= CTemp.getImage() %>" width="64" height="128" /></td>
+                    <td><img src="imagenes/<%= CTemp.getImage() %>" width="64" height="128" /></td>
                   <td>
                       <p><%= CTemp.getName() %></p>
                       
