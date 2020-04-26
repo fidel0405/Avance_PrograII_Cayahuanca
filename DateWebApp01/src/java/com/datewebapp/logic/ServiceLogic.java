@@ -18,7 +18,7 @@ public class ServiceLogic extends Logic
     public List<ServiceObj> getAllServices() {
         List<ServiceObj> CList = null;
         DatabaseX CDatabase = getDatabase();
-        String strSql = "SELECT * FROM usuariosweb.servicios\n" +
+        String strSql = "SELECT * FROM usuariosweb.servicios" +
 "WHERE usuariosweb.servicios.home =1;";
         ResultSet CResult = CDatabase.executeQuery(strSql);
         
