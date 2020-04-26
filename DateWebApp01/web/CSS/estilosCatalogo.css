@@ -105,6 +105,7 @@ main{
     height: 100%;
     overflow: hidden;
     
+    
 }
 
 .images ul li img{
@@ -123,15 +124,16 @@ main{
 }
 
 .images ul li{
-
+   
     width: 25%;
-    height: 900px;
+    height: 650px;
     float: left;
     border: 0px solid #2A1B3F;
     border-radius: 20px;
     text-align: center;
     margin: 50px;
     margin-bottom: 5rem;
+    border: 2px solid black;
 }
 
 .images p{
@@ -139,6 +141,22 @@ main{
     text-decoration: none;
     color: #175973;
     
+}
+
+.images td.description{
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.images table{
+    border: 2px solid black;
+    height: 300px;
+}
+
+.images td.res{
+    width: 100%;
+    height: 200px
 }
 
 .button-reserva a{
@@ -191,6 +209,7 @@ main{
     text-align: center;
     width: 200px;
     box-shadow: 0px 3px 0px #373c3c;
+    overflow: hidden;
 }
 
     .button:hover{

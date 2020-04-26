@@ -64,16 +64,13 @@
                 
                 
                 <li>
-                   
-                    
-                    
+   
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
                         <tr>
-                            <td><p>
-                                <b><em><%= CTemp.getDescription() %></em></b>
-                            </p>
+                            <td>
+                                <p><b><em><%= CTemp.getDescription() %></em></b></p>
                             </td>
                         </tr>
                         <tr>
