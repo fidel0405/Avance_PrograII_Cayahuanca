@@ -1,9 +1,3 @@
-<-- 
-    Document   : register
-    Created on : abr 16, 2020, 12:54:27 p.m.
-    Author     : carlos
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -64,7 +58,9 @@
         <br><br>
         
         </div>
-
+        
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
         <footer>
             <div class="container-footer-all">
             
@@ -133,7 +129,7 @@
                 
 
             </div>
-
+            
             <div class="container-footer">
 
                 <div class="information">
