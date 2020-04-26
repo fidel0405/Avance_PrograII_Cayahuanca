@@ -73,24 +73,19 @@
                                 <p><b><em><%= CTemp.getDescription() %></em></b></p>
                             </td>
                         </tr>
+                        </table>
                         <tr>
                             <td>
                                 <p class="button-reserva"><a href="" class="button">Reservar</a></p>
                             </td>
                         </tr>
-                        
-                    </table>
-                    
                 </li>
                 
                 <%
                     }
               }
           %>  
-            </ul>
-              
-                      
-
+            </ul>        
         </div>
     </main>
    
