@@ -1,4 +1,3 @@
-
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="com.datewebapp.objects.ServiceObj"%>
@@ -25,6 +24,7 @@
             <label>Bienvenido, <%= CUser.getUser() %></label><br>
         </div>
         <br><br>
+        <a href="cataEsmaltes.html">prueba</a>
         
         <table style="width:50%" border="1">
             
