@@ -36,8 +36,8 @@
 
 #logo
 {
-    width: 200px;
-    height: 75px;
+    width: 250px;
+    height: 90px;
 }
 
 body
@@ -61,9 +61,10 @@ body
 
 img
 {
-    width: 120px;
+    width: 140px;
     height: 160px;
     margin: 5px;
     border-radius: 20px;
+    object-fit: cover;
         
 }
