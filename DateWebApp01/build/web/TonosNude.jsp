@@ -19,7 +19,7 @@
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("tonosnudes");
+                (List<ServiceObj>)request.getSession().getAttribute("tonosnude");
     %>
     <body>
         <header class="header">
@@ -30,8 +30,8 @@
                     <ul>
                         <li><a href="asfaMain.jsp">Inicio</a></li>
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
-                        <li><a href="Acrilicos.jsp">Acrílicos</a></li>
-                        <li><a href="TonosNude.jsp">Uñas Acrílicas</a></li>
+                        <li><a href="TonosNude.jsp">Acrílicos</a></li>
+                        <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
                         <li><a href="">Cerrar sesión</a></li>
                     </ul>
                 </nav>
@@ -40,10 +40,19 @@
         
         <main>
 
-        <div class="message">El esmalte perfecto</div>
+        <div class="message">Acrilicos</div>
 
         <br><br>
-         <%
+         
+        
+         <div class="images">
+             
+             
+             
+                <!--Imagen 1-->
+            <ul>
+                
+                <%
               if(CList!=null)
               {
                   Iterator<ServiceObj> ite = CList.iterator();
@@ -52,33 +61,40 @@
                   {
                       CTemp = ite.next();
           %>
-        
-         <div class="images">
-            <ul>
-                <!--Imagen 1-->
+                
+                
                 <li>
+                   
+                    
+                    
                     <h1><%= CTemp.getName() %></h1>
-                   <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
+                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
-                        <td>
-                            <tr><p>
+                        <tr>
+                            <td><p>
                                 <b><em><%= CTemp.getDescription() %></em></b>
                             </p>
-                            </tr>
-                        </td>
-                        <td>
-                            <tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <p class="button-reserva"><a href="" class="button">Reservar</a></p>
-                            </tr>
-                        </td>
+                            </td>
+                        </tr>
                         
                     </table>
+                    
                 </li>
+                
                 <%
                     }
               }
-          %>
-           </div>
+          %>  
+            </ul>
+              
+                      
+
+        </div>
     </main>
    
 
