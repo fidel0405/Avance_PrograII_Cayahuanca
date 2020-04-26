@@ -43,7 +43,13 @@
         <div class="message">El esmalte perfecto</div>
 
         <br><br>
-         <%
+         
+        
+         <div class="images">
+            <ul>
+                <!--Imagen 1-->
+                
+                <%
               if(CList!=null)
               {
                   Iterator<ServiceObj> ite = CList.iterator();
@@ -52,10 +58,8 @@
                   {
                       CTemp = ite.next();
           %>
-        
-         <div class="images">
-            <ul>
-                <!--Imagen 1-->
+                
+                
                 <li>
                     <h1><%= CTemp.getName() %></h1>
                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
@@ -78,6 +82,7 @@
                     }
               }
           %>
+            </ul>
            </div>
     </main>
    
