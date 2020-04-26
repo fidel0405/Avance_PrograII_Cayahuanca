@@ -24,7 +24,6 @@
             <label>Bienvenido, <%= CUser.getUser() %></label><br>
         </div>
         <br><br>
-        <a href="cataEsmaltes.html">prueba</a>
         
         <table style="width:50%" border="1">
             
