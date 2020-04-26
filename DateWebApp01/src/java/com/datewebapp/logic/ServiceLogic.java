@@ -4,7 +4,6 @@ package com.datewebapp.logic;
 import balcorpfw.database.DatabaseX;
 import balcorpfw.logic.Logic;
 import com.datewebapp.objects.ServiceObj;
-import com.datewebapp.objects.UserObj;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -19,28 +18,39 @@ public class ServiceLogic extends Logic
     public List<ServiceObj> getAllServices() {
         List<ServiceObj> CList = null;
         DatabaseX CDatabase = getDatabase();
-        String strSql = "SELECT * FROM gamestoredb.game;";
+        String strSql = "SELECT * FROM usuariosweb.servicios\n" +
+"WHERE usuariosweb.servicios.home =1;";
         ResultSet CResult = CDatabase.executeQuery(strSql);
         
         if(CResult!=null)
         {
             try 
+                
+                //`id`
+  //`name` 
+  //`description` 
+  //`type` 
+  //`image` 
+  //`home` 
             {
                 int iId;
                 String strName;
-                String strGenres;
+                String strDescription;
+                String srtType;
                 String strImage;
-                GameObj CTemp;
+                
+                ServiceObj CTemp;
                 CList = new ArrayList<>();
                 
                 while(CResult.next())
                 {
                     iId = CResult.getInt("id");
                     strName = CResult.getString("name");
-                    strGenres = CResult.getString("genre");
+                    strDescription = CResult.getString("description");
+                    srtType = CResult.getString("type");
                     strImage = CResult.getString("image");
                     
-                    CTemp = new GameObj(iId, strName, strGenres, strImage);
+                    CTemp = new ServiceObj(iId, strName, strDescription, srtType, strImage);
                     CList.add(CTemp);
                 }
             } 

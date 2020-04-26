@@ -11,7 +11,7 @@ CREATE TABLE `usuariosweb`.`usuarios` (
   PRIMARY KEY (`id`));
 
 
-INSERT INTO usuariosweb.usuariosx
+INSERT INTO usuariosweb.usuarios
 (id, name, lastname, age, email, user, password)
 VALUES
 (0,'Carlos','Orellana',20,'robertosiete2@gmail.com','elidiota','carlos123');
@@ -49,7 +49,7 @@ INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_TN','Tonos Nude
 
 
 
-CREATE TABLE `sys`.`servicios` (
+CREATE TABLE `usuariosweb`.`servicios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(145) NOT NULL,
   `description` VARCHAR(300) NOT NULL,
@@ -58,23 +58,21 @@ CREATE TABLE `sys`.`servicios` (
   `home` VARCHAR(45) BINARY NULL,
   PRIMARY KEY (`id`));
 
-SELECT * FROM sys.servicios;
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Pink girl','Esta combinacion de rosados es perfecta para todas esas mujeres que guardan a su niña interiror. El contraste platinado le da un toque de modernidad.','MaquillajePermanente','4_MP.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Shiny nude','Los tonos nude nuca pasan de modo. Estos tonos son perfectos para toda ocacion o para trabjados que necesiten seriedad. El toque de glitter hace que resalte la elegancia.','MaquillajePermanente','6_MP.jpg',false;
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Fiesta pastel','Combinación de esmaltes en tonalidades pastel. Gran tendencia 2019. Excelente combinación para chicas tiernas.','MaquillajePermanente','2_MP.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Glam Girl','Esta combinación de rosa pastel y gris hace una combinación elegante perfecta para una cita romántica o salida con amigas.','MaquillajePermanente','1_MP.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Ternura','El blanco es la mejor manera de representar la ternura y pureza que llevamos todas las mujeres al combinarlo con el rosa logramos un mayor impacto.','MaquillajePermanente','5_MP.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Blue bubble','combinación de azules da una sensación de frescura y relajación. Es perfecta para el verano para combinar con un bikini y el mar.','MaquillajePermanente','3_MP.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'XV','Estas uñas son una elección perfecta para las quinceañeras modernas. La técnica baby boomer es una gran técnica que ha revolucionado la manera de hacer acrílico.','TonosNude','1_TN.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Color baby','La técnica de baby boomer es tan versátil que esta se puede realizar con diversas combinaciones de colores para lograr efectos únicos.','TonosNude','6_TN.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Baby boomer','Este es el clásico, elegante y perfecto para una boda. La combinación de tonos nude y blanco da una gran apariencia cuando se difuminan.','TonosNude','2_TN.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Pink power','El acrílico cover es una gran opción para todas esas chicas que les gusta andar uñas discretas. Este tono de color es un rosa clásico que combina con todo.','TonosNude','3_TN.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Clasic white','Esta combinación de acrílico blanco y nude con destellos de glitter dorados son una excelente opción para usar todos los días. Como dicen por ahí, lo más sencillo es lo más bonito.','TonosNude','5_TN.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Blue sky','Los sets de uñas acrílicas largas ayudan a que las manos de vean más largas y estilizadas.  La elección de un solo tono de esmalte es lo clásico que se puede modernizar con pequeños detalles como escarcha.','Acrilicos','2_A.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Plantón ','Esta variante de color hace resaltar el tono de pie del usurario. Ya no solo se ven los cambios con esmaltes brillosos, sino con tonos neutros.','Acrilicos','1_A.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'White party','El color favorito en uñas para las mujeres el blanco. Cover acrílico blanco y el brillo permanente resalta este color. Al combinarlos con glitter se logra un efecto más juvenil.','Acrilicos','3_A.jpg',false);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Baby Pink','Un set de acrílico digno para cualquier princesa. La combinación de glitter y pedrería en forma de corona es el toque que toda mujer necesita.','Acrilicos','4_A.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Color frensh','Esta nueva tendencia de frensh es furor en redes sociales. Una línea en todo el borde y lateral de las uñas es lo nuevo. Al aplicar acrílico cover nude y un poco de escarcha le logran efectos increíbles.','Acrilicos','5_A.jpg',true);
-INSERT INTO sys.servicios(id,name,description,type,image,home) VALUES(0,'Color line','Esta es otra variente del clasico frensh. Una linea diagonal. La conbinacion de colores al gusto de cada persona le da un toque unico. El uso de acrilico cober como base es el secreto de estas tecnica.','Acrilicos','6_A.jpg',true);
-
-
+SELECT * FROM usuariosweb.servicios;
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Pink girl','Esta combinacion de rosados es perfecta para todas esas mujeres que guardan a su niña interiror. El contraste platinado le da un toque de modernidad.','MaquillajePermanente','4_MP.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Shiny nude','Los tonos nude nuca pasan de modo. Estos tonos son perfectos para toda ocacion o para trabjados que necesiten seriedad. El toque de glitter hace que resalte la elegancia.','MaquillajePermanente','6_MP.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Fiesta pastel','Combinación de esmaltes en tonalidades pastel. Gran tendencia 2019. Excelente combinación para chicas tiernas.','MaquillajePermanente','2_MP.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Glam Girl','Esta combinación de rosa pastel y gris hace una combinación elegante perfecta para una cita romántica o salida con amigas.','MaquillajePermanente','1_MP.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Ternura','El blanco es la mejor manera de representar la ternura y pureza que llevamos todas las mujeres al combinarlo con el rosa logramos un mayor impacto.','MaquillajePermanente','5_MP.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Blue bubble','combinación de azules da una sensación de frescura y relajación. Es perfecta para el verano para combinar con un bikini y el mar.','MaquillajePermanente','3_MP.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'XV','Estas uñas son una elección perfecta para las quinceañeras modernas. La técnica baby boomer es una gran técnica que ha revolucionado la manera de hacer acrílico.','TonosNude','1_TN.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Color baby','La técnica de baby boomer es tan versátil que esta se puede realizar con diversas combinaciones de colores para lograr efectos únicos.','TonosNude','6_TN.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Baby boomer','Este es el clásico, elegante y perfecto para una boda. La combinación de tonos nude y blanco da una gran apariencia cuando se difuminan.','TonosNude','2_TN.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Pink power','El acrílico cover es una gran opción para todas esas chicas que les gusta andar uñas discretas. Este tono de color es un rosa clásico que combina con todo.','TonosNude','3_TN.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Clasic white','Esta combinación de acrílico blanco y nude con destellos de glitter dorados son una excelente opción para usar todos los días. Como dicen por ahí, lo más sencillo es lo más bonito.','TonosNude','5_TN.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Blue sky','Los sets de uñas acrílicas largas ayudan a que las manos de vean más largas y estilizadas.  La elección de un solo tono de esmalte es lo clásico que se puede modernizar con pequeños detalles como escarcha.','Acrilicos','2_A.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Plantón ','Esta variante de color hace resaltar el tono de pie del usurario. Ya no solo se ven los cambios con esmaltes brillosos, sino con tonos neutros.','Acrilicos','1_A.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'White party','El color favorito en uñas para las mujeres el blanco. Cover acrílico blanco y el brillo permanente resalta este color. Al combinarlos con glitter se logra un efecto más juvenil.','Acrilicos','3_A.jpg',false);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Baby Pink','Un set de acrílico digno para cualquier princesa. La combinación de glitter y pedrería en forma de corona es el toque que toda mujer necesita.','Acrilicos','4_A.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Color frensh','Esta nueva tendencia de frensh es furor en redes sociales. Una línea en todo el borde y lateral de las uñas es lo nuevo. Al aplicar acrílico cover nude y un poco de escarcha le logran efectos increíbles.','Acrilicos','5_A.jpg',true);
+INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Color line','Esta es otra variente del clasico frensh. Una linea diagonal. La conbinacion de colores al gusto de cada persona le da un toque unico. El uso de acrilico cober como base es el secreto de estas tecnica.','Acrilicos','6_A.jpg',true);
