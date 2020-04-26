@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it!</title>
+        <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -67,7 +67,7 @@
    
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva">
+                    <table class="reserva" >
                         <tr>
                             <td>
                                 <p><b><em><%= CTemp.getDescription() %></em></b></p>

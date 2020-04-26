@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it!/Acrilicos</title>
+        <title>ASFA Nailed it! | Acrílicos</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -40,7 +40,7 @@
         
         <main>
 
-        <div class="message">Acrilicos</div>
+        <div class="message">Acrílicos</div>
 
         <br><br>
          
