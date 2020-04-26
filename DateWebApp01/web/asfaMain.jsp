@@ -43,7 +43,16 @@
         <div class="message">Nuestros Servicios</div>
 
         <br><br>
-         <%
+         
+        
+         <div class="images">
+             
+             
+             
+                <!--Imagen 1-->
+            <ul>
+                
+                <%
               if(CList!=null)
               {
                   Iterator<ServiceObj> ite = CList.iterator();
@@ -52,12 +61,12 @@
                   {
                       CTemp = ite.next();
           %>
-        
-         <div class="images">
-            
-                <!--Imagen 1-->
-            <ul>
+                
+                
                 <li>
+                   
+                    
+                    
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
@@ -74,12 +83,15 @@
                         </tr>
                         
                     </table>
+                    
                 </li>
-            </ul>
+                
                 <%
                     }
               }
-          %>
+          %>  
+            </ul>
+              
                       
 
         </div>
