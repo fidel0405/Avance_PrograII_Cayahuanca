@@ -8,7 +8,7 @@
     color: white;
     font-size: 18px;
     float: right;
-    overflow: hidden;
+
 }
 
 .boton{
@@ -45,6 +45,7 @@
 body
 {
     background: #30C3D8;
+
 }
 
 .izquierda
@@ -69,5 +70,5 @@ img
     margin: 5px;
     border-radius: 20px;
     object-fit: cover;
-        
+
 }
