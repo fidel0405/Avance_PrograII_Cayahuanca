@@ -57,8 +57,9 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        \r\n");
       out.write("    <body>\r\n");
       out.write("        <br>\r\n");
-      out.write("        <div align=\"center\"> <img src=\"imagenes/Logo.png\" alt=\"logo\" id=\"logo\"></div>\r\n");
+      out.write("        <div align=\"center\"> <img src=\"imagenes/logo.jpeg\" alt=\"logo\" id=\"logo\"></div>\r\n");
       out.write("        \r\n");
+      out.write("        <br>\r\n");
       out.write("        <div class=\"izquierda\">\r\n");
       out.write("            <img src=\"imagenes/1_A.jpeg\" alt=\"prueba1\">\r\n");
       out.write("            <img src=\"imagenes/1_MP.jpeg\" alt=\"prueba2\">\r\n");
@@ -70,7 +71,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        \r\n");
       out.write("        <div>\r\n");
       out.write("        <form action=\"UserServlet\" class=\"formulario\" method=\"post\">\r\n");
-      out.write("            \r\n");
+      out.write("            <legend align=\"center\">Unete a nuestra gran familia</legend><br>\r\n");
       out.write("            Nombre:<br> \r\n");
       out.write("            <input type=\"text\" name=\"name\" class=\"datos\" required />\r\n");
       out.write("            <br>\r\n");
@@ -102,8 +103,10 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <br><br>\r\n");
       out.write("        \r\n");
       out.write("        </div>\r\n");
+      out.write("        \r\n");
+      out.write("        <br><br><br><br><br><br><br><br><br><br><br>\r\n");
+      out.write("        <br><br><br><br><br><br><br><br><br><br>\r\n");
       out.write("                \r\n");
-      out.write("        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>\r\n");
       out.write("        <footer>\r\n");
       out.write("            <div class=\"container-footer-all\">\r\n");
       out.write("            \r\n");

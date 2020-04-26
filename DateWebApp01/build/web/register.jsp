@@ -32,7 +32,7 @@
         
         <div>
         <form action="UserServlet" class="formulario" method="post">
-            <legend align="center">Unete a nuetsra gran familia</legend><br>
+            <legend align="center">Unete a nuestra gran familia</legend><br>
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
             <br>
