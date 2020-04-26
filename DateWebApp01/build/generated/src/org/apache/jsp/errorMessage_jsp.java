@@ -49,6 +49,12 @@ public final class errorMessage_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Error page</title>\n");
+      out.write("        <style>\n");
+      out.write("            body{\n");
+      out.write("                background-image: url(\"imagenes/error.jpg\");\n");
+      out.write("                background-repeat: no-repeat;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
       out.write("    </head>\n");
       out.write("    ");
 

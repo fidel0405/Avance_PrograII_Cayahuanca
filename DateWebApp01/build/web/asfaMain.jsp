@@ -43,7 +43,16 @@
         <div class="message">Nuestros Servicios</div>
 
         <br><br>
-         <%
+         
+        
+         <div class="images">
+             
+             
+             
+                <!--Imagen 1-->
+            <ul>
+                
+                <%
               if(CList!=null)
               {
                   Iterator<ServiceObj> ite = CList.iterator();
@@ -52,33 +61,40 @@
                   {
                       CTemp = ite.next();
           %>
-        
-         <div class="images">
-            <ul>
-                <!--Imagen 1-->
+                
+                
                 <li>
+                   
+                    
+                    
                     <h1><%= CTemp.getName() %></h1>
-                   <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
+                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
-                        <td>
-                            <tr><p>
+                        <tr>
+                            <td><p>
                                 <b><em><%= CTemp.getDescription() %></em></b>
                             </p>
-                            </tr>
-                        </td>
-                        <td>
-                            <tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <p class="button-reserva"><a href="" class="button">Reservar</a></p>
-                            </tr>
-                        </td>
+                            </td>
+                        </tr>
                         
                     </table>
+                    
                 </li>
+                
                 <%
                     }
               }
-          %>
-           </div>
+          %>  
+            </ul>
+              
+                      
+
+        </div>
     </main>
    
 
