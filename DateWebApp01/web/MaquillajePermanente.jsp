@@ -30,8 +30,8 @@
                     <ul>
                         <li><a href="asfaMain.jsp">Inicio</a></li>
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
-                        <li><a href="Acrilicos.jsp">Acrílicos</a></li>
-                        <li><a href="TonosNude.jsp">Uñas Acrílicas</a></li>
+                        <li><a href="TonosNude.jsp">Acrílicos</a></li>
+                        <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
                         <li><a href="">Cerrar sesión</a></li>
                     </ul>
                 </nav>
@@ -40,14 +40,22 @@
         
         <main>
 
-        <div class="message">El esmalte perfecto</div>
+        <div class="message">Esmaltes</div>
 
         <br><br>
          
         
          <div class="images">
+<<<<<<< HEAD
             <ul>
                 <!--Imagen 1-->
+=======
+             
+             
+             
+                <!--Imagen 1-->
+            <ul>
+>>>>>>> b2c09e35d622e34284e47139ca4eeda917e73e2f
                 
                 <%
               if(CList!=null)
@@ -61,29 +69,43 @@
                 
                 
                 <li>
+                   
+                    
+                    
                     <h1><%= CTemp.getName() %></h1>
-                   <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
+                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
-                        <td>
-                            <tr><p>
+                        <tr>
+                            <td><p>
                                 <b><em><%= CTemp.getDescription() %></em></b>
                             </p>
-                            </tr>
-                        </td>
-                        <td>
-                            <tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <p class="button-reserva"><a href="" class="button">Reservar</a></p>
-                            </tr>
-                        </td>
+                            </td>
+                        </tr>
                         
                     </table>
+                    
                 </li>
+                
                 <%
                     }
               }
+<<<<<<< HEAD
           %>
             </ul>
            </div>
+=======
+          %>  
+            </ul>
+              
+                      
+
+        </div>
+>>>>>>> b2c09e35d622e34284e47139ca4eeda917e73e2f
     </main>
    
 
