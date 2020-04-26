@@ -30,8 +30,8 @@
                     <ul>
                         <li><a href="asfaMain.jsp">Inicio</a></li>
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
-                        <li><a href="Acrilicos.jsp">Acrílicos</a></li>
-                        <li><a href="TonosNude.jsp">Uñas Acrílicas</a></li>
+                        <li><a href="TonosNude.jsp">Acrílicos</a></li>
+                        <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
                         <li><a href="">Cerrar sesión</a></li>
                     </ul>
                 </nav>
