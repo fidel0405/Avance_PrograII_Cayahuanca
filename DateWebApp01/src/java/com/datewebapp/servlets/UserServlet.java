@@ -47,9 +47,15 @@ public class UserServlet extends HttpServlet {
             if(CLoginUser!=null)
             {
                 List<ServiceObj> CList = CServiceLogic.getAllServices();
+                List<ServiceObj> EsmaltesList= CServiceLogic.getEsmaltes();
+                List<ServiceObj> TonosNudeList= CServiceLogic.getTonosNude();
+                List<ServiceObj> AcrilicosList= CServiceLogic.getAcrilicos();
                 //log the user
                 request.getSession().setAttribute("logged_user", CLoginUser);
                 request.getSession().setAttribute("services", CList);
+                request.getSession().setAttribute("esmaltes", EsmaltesList);
+                request.getSession().setAttribute("tonosnude", TonosNudeList);
+                request.getSession().setAttribute("acrilicos", AcrilicosList);
                 
                 request.getRequestDispatcher("asfaMain.jsp")
                        .forward(request, response);

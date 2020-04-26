@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it!</title>
+        <title>ASFA Nailed it!/Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -19,7 +19,7 @@
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("services");
+                (List<ServiceObj>)request.getSession().getAttribute("esmaltes");
     %>
     <body>
         <header class="header">
@@ -40,7 +40,7 @@
         
         <main>
 
-        <div class="message">Nuestros Servicios</div>
+        <div class="message">El esmalte perfecto</div>
 
         <br><br>
          <%
