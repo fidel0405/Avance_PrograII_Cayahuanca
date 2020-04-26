@@ -20,6 +20,7 @@
         <br>
         <div align="center"> <img src="imagenes/logo.jpeg" alt="logo" id="logo"></div>
         
+        <br>
         <div class="izquierda">
             <img src="imagenes/1_A.jpeg" alt="prueba1">
             <img src="imagenes/1_MP.jpeg" alt="prueba2">
@@ -31,7 +32,7 @@
         
         <div>
         <form action="UserServlet" class="formulario" method="post">
-            
+            <legend align="center">Unete a nuetsra gran familia</legend><br>
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
             <br>
@@ -63,8 +64,10 @@
         <br><br>
         
         </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
                 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer>
             <div class="container-footer-all">
             
