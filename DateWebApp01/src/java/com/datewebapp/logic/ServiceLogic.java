@@ -14,6 +14,10 @@ import java.util.logging.Logger;
 
 public class ServiceLogic extends Logic 
 {
+    public ServiceLogic(String connString) 
+    {
+        super(connString);
+    }
 
     public List<ServiceObj> getAllServices() {
         List<ServiceObj> CList = null;
