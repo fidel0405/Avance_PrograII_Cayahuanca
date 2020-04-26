@@ -52,7 +52,7 @@ body
     margin: 20px;
     margin-left: 130px;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: 'courier';
     color: white;
     font-size: 18px;
@@ -66,5 +66,6 @@ img
     height: 160px;
     object-fit: cover;
     margin: 5px;
+    border-radius: 10px;
         
 }
