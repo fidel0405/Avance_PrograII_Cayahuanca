@@ -36,8 +36,8 @@
 
 #logo
 {
-    width: 80px;
-    height: 100%;
+    width: 200px;
+    height: 75px;
 }
 
 body
@@ -59,12 +59,11 @@ body
 }
 
 
-.izquierda img
+img
 {
     width: 120px;
     height: 160px;
     margin: 5px;
     border-radius: 20px;
-    display: inline-flex;
         
 }
