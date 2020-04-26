@@ -25,6 +25,7 @@ public class UserServlet extends HttpServlet {
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
+        ServiceLogic CServiceLogic = new ServiceLogic(connString);
         
         //en este servlet vamos a manejar el log in y el register de los usuarios
         //primero veremos el log in
@@ -45,7 +46,6 @@ public class UserServlet extends HttpServlet {
             //verificacion
             if(CLoginUser!=null)
             {
-                ServiceLogic CServiceLogic = new ServiceLogic();
                 List<ServiceObj> CList = CServiceLogic.getAllServices();
                 //log the user
                 request.getSession().setAttribute("logged_user", CLoginUser);

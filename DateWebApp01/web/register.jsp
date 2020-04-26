@@ -1,4 +1,4 @@
-<%-- 
+<-- 
     Document   : register
     Created on : abr 16, 2020, 12:54:27 p.m.
     Author     : carlos
@@ -64,10 +64,7 @@
         <br><br>
         
         </div>
-        
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-                
+
         <footer>
             <div class="container-footer-all">
             
@@ -82,9 +79,14 @@
                         </div>
                         
                         <div class="row">
-                            <a href="https://www.instagram.com/asfa.nailedit/?hl=es-la"><i class="fab fa-instagram" ></i></a>
+                            <i class="fab fa-instagram" ></i>
                             <a href="https://www.instagram.com/asfa.nailedit/?hl=es-la"><label >Síguenos en Instagram</label></a>
                         </div>
+
+                        <h3>Servicios en:</h3>
+                            <p>ESEN</p>
+                            <p>San Miguel</p>
+                            <p>Vía del Mar</p>
                     </div>
 
                     
@@ -131,7 +133,7 @@
                 
 
             </div>
-
+            
             <div class="container-footer">
 
                 <div class="information">

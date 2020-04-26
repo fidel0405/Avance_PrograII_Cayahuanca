@@ -37,20 +37,25 @@ body{
 }
 
 .header a{
+   
     color: white;
     text-decoration: none;
 }
 
 .navigation ul{
+   
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
     .navigation ul li{
+        
         display: inline-block;
+        
     }
         .navigation ul li a{
+            
             display: block;
             padding: 0.5rem 1rem;
             transition: all 0.4s linear;
@@ -59,6 +64,7 @@ body{
 
             .navigation ul li a:hover{
             background: gray;
+            
             }
 
 .logo-nav-container{
@@ -74,7 +80,7 @@ body{
 
 main{
     padding-top: 10rem;
-    background: #1F98A9;
+    background: #1f98a9;
     padding-bottom: 5rem;
 }
 
@@ -103,8 +109,8 @@ main{
 
 .images ul li img{
     max-width: 100%;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 20px;
     display: inline-flex;
 
@@ -112,6 +118,7 @@ main{
 
 .images ul{
     list-style: none;
+    overflow: hidden;
     
 }
 
@@ -125,6 +132,24 @@ main{
     text-align: center;
     margin: 50px;
     margin-bottom: 5rem;
+}
+
+.images p{
+    text-align: justify;
+    text-decoration: none;
+    color: #175973;
+    
+}
+
+.button-reserva a{
+    text-decoration: none;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+.images h1{
+    color: #022840;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container-form{
@@ -154,8 +179,9 @@ main{
     justify-content: center;
 }
 
+
 .button{
-    background: #7f8c8d;
+    background: #216170;
     color: #fff;
     display: inline-block;
     font-size: 1.25em;
@@ -224,6 +250,14 @@ footer{
     
 }
 
+
+
+.column1 p{
+    font-size: 17px;
+    color: #C7C7C7;
+    margin: 0px;
+}
+
 .column2{
     width: 33%;
     text-align: center;
@@ -255,10 +289,12 @@ footer{
 .container-footer{
     text-align: center;
     width: 100%;
+    height: 100%;
     background: #000000;
     justify-content: space-between;
     margin-top: 20px;
-    padding: 0px;
+    margin-bottom: 0px;
+    padding: 0.1px;
     
 }
 
@@ -311,21 +347,41 @@ footer{
 
         width: 30%;
         float: left;
-        border: 2px solid #2A1B3F;
+        border: 0px solid #2A1B3F;
         border-radius: 20px;
         text-align: center;
         margin: 10px;
+        margin-bottom: 100px;
     }
     
     
     
-    
+    .button{
+        overflow: hidden;
+        background: #216170;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.25em;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        padding: 10px 0px;
+        text-align: center;
+        width: 100px;
+        box-shadow: 0px 3px 0px #373c3c;
+    }
+
     
     
     .container-body{
         flex-wrap: wrap;
     }
 
+    .container-footer-all{
+        flex-wrap: wrap;
+    }
+    .container-footer{
+        flex-wrap: wrap;
+    }
     .column2,
     .column3{
         margin-top: 40px;
