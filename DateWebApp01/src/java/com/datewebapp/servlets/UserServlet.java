@@ -1,9 +1,9 @@
 package com.datewebapp.servlets;
 
 import com.datewebapp.logic.UserLogic;
-import com.datewebapp.objects.ServicioObj;
-import com.datewebapp.logic.ServicioLogic;
+import com.datewebapp.logic.ServiceLogic;
 import com.datewebapp.objects.UserObj;
+import com.datewebapp.objects.ServiceObj;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -45,13 +45,11 @@ public class UserServlet extends HttpServlet {
             //verificacion
             if(CLoginUser!=null)
             {
-                //Vamos a mostrar los productos de nuestros servicios
-                
-                //ServicioLogic CServicioLogic = new ServicioLogic();
-                //List<ServicioObj> CList= CServicioLogic.getAllServicios();
-                
-                //el metodo devolvio informacion 
+                ServiceLogic CServiceLogic = new ServiceLogic();
+                List<ServiceObj> CList = CServiceLogic.getAllServices();
+                //log the user
                 request.getSession().setAttribute("logged_user", CLoginUser);
+                request.getSession().setAttribute("services", CList);
                 
                 request.getRequestDispatcher("asfaMain.jsp")
                        .forward(request, response);

@@ -20,6 +20,7 @@
         <br>
         <div align="center"> <img src="imagenes/logo.jpeg" alt="logo" id="logo"></div>
         
+        <br>
         <div class="izquierda">
             <img src="imagenes/1_A.jpeg" alt="prueba1">
             <img src="imagenes/1_MP.jpeg" alt="prueba2">
@@ -30,8 +31,8 @@
         </div>
         
         <div>
-        <form action="UserServlet" class="formulario" method="post">
-            
+            <form action="UserServlet" class="formulario" id="register" method="post">
+            <legend align="center">Unete a nuestra gran familia</legend><br>
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
             <br>
@@ -51,7 +52,7 @@
             <input type="password" name="password" class="datos" id="password" required />
             <br>
             Confirmar contraseña: <br>
-            <input type="password" name="password" class="datos" id="confirm_password" required />
+            <input type="password" name="confirm_password" class="datos" id="confirm_password" required />
             <br><br>
             
             
@@ -63,8 +64,10 @@
         <br><br>
         
         </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
                 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer>
             <div class="container-footer-all">
             
@@ -140,8 +143,10 @@
         
         
         </footer>
-        
-        <script src="Scripts/passwordConfirm.js" type="text/javascript"></script>        
+               
+        <script src="Scripts/validate/jquery-1.8.3.js" type="text/javascript"></script>
+        <script src="Scripts/validate/jquery.validate.js" type="text/javascript"></script>
+        <script src="Scripts/registerValidate.js" type="text/javascript"></script> 
         
     </body>
 </html>

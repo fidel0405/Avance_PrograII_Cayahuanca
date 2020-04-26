@@ -1,9 +1,7 @@
-<%-- 
-    Document   : asfaMain
-    Created on : Jue 16, 2020
-    Author     : carlos
---%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="com.datewebapp.objects.ServiceObj"%>
 <%@page import="com.datewebapp.objects.UserObj"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,54 +12,46 @@
         
     </head>
     <%
-        UserObj CLoggedUser = 
+        UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
+        List<ServiceObj> CList = 
+                (List<ServiceObj>)request.getSession().getAttribute("services");
     %>
     <body>
-        <%
-            if(CLoggedUser!=null)
-            {
-        %>
-        <h1 class="title">Main system</h1>
-        <p>you are logged in, welcome <%= CLoggedUser.getUser() %></p>
-        
-        <%//Mostrar informacion de la pagina principal%>
-        
+        <h1>Store Main</h1>
+        <br><br>
         
         <div>
-            <table>
-          <tr>
-            <th>Esmalte permanente</th>
-            <th>Set uñas acrílicas</th>
-          </tr>
-          <tr>
-            <td>Retiro de acrílico</td>
-            <td>Baño de uñas acrílicas</td>
-          </tr>
-          <tr>
-            <td>Retiro de gel</td>
-            <td>Contáctame</td> 
-          </tr> 
-                
+            <label>Bienvenido, <%= CUser.getUser() %></label><br>
+        </div>
+        <br><br>
+        
+        <table style="width:50%" border="1">
+            
+          <%
+              if(CList!=null)
+              {
+                  Iterator<ServiceObj> ite = CList.iterator();
+                  ServiceObj CTemp;
+                  while(ite.hasNext())
+                  {
+                      CTemp = ite.next();
+          %>  
+                <tr>
+                    <td><img src="images/<%= CTemp.getImage() %>" width="64" height="128" /></td>
+                  <td>
+                      <p><%= CTemp.getName() %></p>
+                      
+                  </td>
+                  <td>
+                      <p><%= CTemp.getDescription() %></p>
+                  </td>
+                </tr>
+          <%
+                    }
+              }
+          %>
           
-         </table>
-
-      </div>
-
-
-    <div> 
-        <br>
-        
-        <%//fin informacion pagina principal%>
-
-        
-        <%
-            }
-            else
-            {
-                request.getRequestDispatcher("errorMessage.jsp")
-                       .forward(request, response);
-            }
-        %>
+        </table>
     </body>
 </html>
