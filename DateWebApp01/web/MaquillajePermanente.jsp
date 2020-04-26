@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it!/Esmaltes</title>
+        <title>ASFA Nailed it! | Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -46,16 +46,15 @@
          
         
          <div class="images">
-<<<<<<< HEAD
             <ul>
                 <!--Imagen 1-->
-=======
+
              
              
              
                 <!--Imagen 1-->
             <ul>
->>>>>>> b2c09e35d622e34284e47139ca4eeda917e73e2f
+
                 
                 <%
               if(CList!=null)
@@ -94,11 +93,11 @@
                 <%
                     }
               }
-<<<<<<< HEAD
+
           %>
             </ul>
            </div>
-=======
+
           %>  
             </ul>
               
