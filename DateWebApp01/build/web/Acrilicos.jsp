@@ -5,6 +5,28 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+                           
+       
+    %>
+
     <head>
         
         <title>ASFA Nailed it! | Uñas Acrílicas</title>
