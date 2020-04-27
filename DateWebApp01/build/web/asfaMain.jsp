@@ -6,6 +6,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        
+        <%
+                           
+        UserObj CUser = 
+                (UserObj)request.getSession().getAttribute("logged_user");
+        List<ServiceObj> CList = 
+                (List<ServiceObj>)request.getSession().getAttribute("services");
+        if(CUser.equals(null))
+            { request.getRequestDispatcher("index.html")
+                       .forward(request, response);
+            }else{
+    %>
+            
+        %>
+        
         <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -15,12 +31,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <%
-        UserObj CUser = 
-                (UserObj)request.getSession().getAttribute("logged_user");
-        List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("services");
-    %>
+
     <body>
         <header class="header">
             <div class="container logo-nav-container">
@@ -32,7 +43,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li onclick="<% request.getSession().invalidate();%>"><a href="index.html">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
@@ -86,11 +97,12 @@
                 <%
                     }
               }
+            }
           %>  
             </ul>        
         </div>
     </main>
-   
+               
 
           <footer>
             <div class="container-footer-all">

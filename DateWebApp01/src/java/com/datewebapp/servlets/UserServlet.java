@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
 public class UserServlet extends HttpServlet {
@@ -91,6 +92,13 @@ public class UserServlet extends HttpServlet {
                    .forward(request, response);
             
         }
+        
+        //cerrar sesion
+        /*HttpSession sesion = request.getSession(true);
+        sesion.invalidate();
+        
+        //Redirecciona  a index.html
+        response.sendRedirect("index.html");*/
         
     }
 
