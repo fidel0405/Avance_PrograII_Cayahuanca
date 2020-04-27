@@ -27,13 +27,8 @@
                     request.getRequestDispatcher("index.jsp").forward(request, response);
             }
                            
-        UserObj CUser = 
-                (UserObj)request.getSession().getAttribute("logged_user");
-        List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("services");
+       
     %>
-            
-        %>
         
         <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
@@ -44,6 +39,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+     <%UserObj CUser = 
+                (UserObj)request.getSession().getAttribute("logged_user");
+        List<ServiceObj> CList = 
+                (List<ServiceObj>)request.getSession().getAttribute("services");
+     %>
 
     <body>
         <header class="header">
