@@ -17,6 +17,7 @@ public class LogoutServlet extends HttpServlet {
     {
         
         //cerrar sesion
+        //idiotas
         HttpSession cerrar = request.getSession();
         cerrar.removeAttribute("logged_user");
         cerrar.invalidate();
