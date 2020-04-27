@@ -21,7 +21,7 @@ public class UserServlet extends HttpServlet {
     {
         //conexion a la bd en la compu de carlos asfabd
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=root"+
+                                + "user=root&password=12345678B-"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);

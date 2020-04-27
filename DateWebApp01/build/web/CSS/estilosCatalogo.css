@@ -117,6 +117,16 @@ main{
     background: rgb(12, 84, 94);
 }
 
+.historial h1{
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 1rem;
+    font-family: Georgia;
+    color:  rgb(217, 250, 247);
+    background: rgb(12, 84, 94);
+    width: 50%;
+}
+
 
 
 .images{
