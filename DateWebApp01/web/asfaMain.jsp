@@ -6,6 +6,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%if(request.getSession(false) != null){
+        response.sendRedirect("index.html"); 
+	}else{%>
+        
         <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -32,7 +36,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li onclick="<% request.getSession().invalidate(); %>"><a href="index.html">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
