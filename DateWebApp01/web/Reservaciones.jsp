@@ -12,6 +12,20 @@
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
         <script src="scripts.js"></script>
+        
+        <!--Fuente del datepicker -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!--Fuente del timepicker -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+        <script src="Scripts/datetime.js"></script>
+            
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -42,24 +56,10 @@
         <form id="myform" action="PersonServlet" method="get">
             Nombre Completo:<%= name %>;
             <br><br>
-            <label for="Lugar">Escoge la fecha para tu reserva:</label>
-            <select id="Fecha">
-              <option value="Lunes1">Lunes: 10:00-12:00</option>
-              <option value="Lunes2">Lunes: 2:30-4:40</option>
-              <option value="Martes1">Martes: 8:00-10:00</option>
-              <option value="Martes2">Martes: 10:00-12:00</option>
-              <option value="Martes3">Martes: 1:00-2:30</option>
-              <option value="Miercoles1">Miercoles: 1:00-2:30</option>
-              <option value="Miercoles2">Martes: 2:30-4:40</option>
-              <option value="Jueves1">Jueves: 8:00-10:00</option>
-              <option value="Jueves2">Jueves: 10:00-12:00</option>
-              <option value="Jueves3">Jueves: 1:00-2:30</option>
-              <option value="Jueves4">Jueves:2:30-4:40</option>
-              <option value="Sabado1">Sabado: 8:00-10:00</option>
-              <option value="Sabado2">Sabado:10:00-12:00</option>
-              <option value="Via del Mar">Via del Mar</option>
-             </select>
-            <br><br>
+            
+            <p>Fecha: <input type="text" id="datepicker"></p>
+            <p>Hora: <input type="text" id="timepicker"></p>
+            
             <label for="Lugar">Escoge un lugar para tu reserva:</label>
             <select id="Lugar">
               <option value="ESEN">ESEN</option>
@@ -70,7 +70,8 @@
             <input type="submit" name="mysubmit" value="Reservar" />
             <br>
             <input type="submit" name="mysubmit" value="Reservar otros" />
-                    </form>
+         
+        </form>
          <br><br><br><br><br><br><br><br><br><br>
          
         <footer>

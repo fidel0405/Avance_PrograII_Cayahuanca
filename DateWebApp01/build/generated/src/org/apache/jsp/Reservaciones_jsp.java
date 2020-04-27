@@ -80,7 +80,7 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                        <li><a href=\"MaquillajePermanente.jsp\">Esmaltes</a></li>\r\n");
       out.write("                        <li><a href=\"TonosNude.jsp\">Acrílicos</a></li>\r\n");
       out.write("                        <li><a href=\"Acrilicos.jsp\">Uñas Acrílicas</a></li>\r\n");
-      out.write("                        <li><a href=\"\">Cerrar sesión</a></li>\r\n");
+      out.write("                        <li><a href=\"LogoutServlet\">Cerrar sesión</a></li>\r\n");
       out.write("                    </ul>\r\n");
       out.write("                </nav>\r\n");
       out.write("            </div>\r\n");
@@ -110,6 +110,8 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("              <option value=\"Sabado2\">Sabado:10:00-12:00</option>\r\n");
       out.write("              <option value=\"Via del Mar\">Via del Mar</option>\r\n");
       out.write("             </select>\r\n");
+      out.write("            <input type=\"time-picker\" id=\"hora\" name=\"hora\"\r\n");
+      out.write("                    min=\"09:00\" max=\"18:00\" required>\r\n");
       out.write("            <br><br>\r\n");
       out.write("            <label for=\"Lugar\">Escoge un lugar para tu reserva:</label>\r\n");
       out.write("            <select id=\"Lugar\">\r\n");
