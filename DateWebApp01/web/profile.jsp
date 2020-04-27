@@ -7,18 +7,8 @@
 <html>
     <head>
         
-        
-        <%
-                           
-        if(request.getSession(true)==null)
-            { response.sendRedirect("index.html");
-            }else{
-            UserObj CUser = 
-                (UserObj)request.getSession().getAttribute("logged_user");
-        List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("services");
-    %>
-            
+  
+          
 
         
         <title>ASFA Nailed it! | Inicio</title>
@@ -42,9 +32,9 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick=""><a>Opciones</a>
+                        <li onclick=""><a href="index.html">Opciones</a>
                             <ul class="desplegable">
-                                <li onclick=""><a href="profile.jsp">Perfil</a>
+                                <li onclick=""><a href="index.html">Perfil</a>
                                 <li onclick=""><a href="index.html">Cerrar sesión</a></li>
                                 
                             </ul>
@@ -54,58 +44,53 @@
             </div>
         </header>
         
-        <main>
+    <main class="main-profile">
 
-        <div class="message">Nuestros Servicios</div>
+        <div class="datos">
+            
+            <img src="imagenes/user.png">
+            <h1>Nombre</h1>
+            <p>Username</p>
+            <p>Cerrar sesión</p>
 
-        <br>
+        </div>
+        
+
+        <div class="historial">
+            <h1>Historial</h1>
+            <table cellspacing="0">
+                <tr>
+                    <td><p><b>N°</b></p></td>
+                    <td><p><b>Servicio</b></p></td>
+                    <td><p><b>Fecha</b></p></td>
+                    <td><p><b>Hora</b></p></td>
+                    <td><p><b>Lugar</b></p></td>
+                </tr>
+                
+                <tr>
+                    <td><p>1</p></td>
+                    <td><p>Maquillaje Permanente</p></td>
+                    <td><p>11/05/2020</p></td>
+                    <td><p>11:00 a. m.</p></td>
+                    <td><p>ESEN</p></td>
+                </tr>
+                
+                <tr>
+                    <td><p>2</p></td>
+                    <td><p>Uñas Acrílicas</p></td>
+                    <td><p>20/05/2020</p></td>
+                    <td><p>8:00 a. m.</p></td>
+                    <td><p>Vía del mar</p></td>
+                </tr>
+                
+            </table>
+        
+        
+        </div>
+        
          
         
-         <div class="images">
-             
-             
-             
-                <!--Imagen 1-->
-            <ul>
-                
-                <%
-              if(CList!=null)
-              {
-                  Iterator<ServiceObj> ite = CList.iterator();
-                  ServiceObj CTemp;
-                  while(ite.hasNext())
-                  {
-                      CTemp = ite.next();
-          %>
-              
-                
-                <li>
-   
-                    <h1><%= CTemp.getName() %></h1>
-                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva" >
-                        <tr>
-                            <td>
-                                <p><b><em><%= CTemp.getDescription() %></em></b></p>
-                            </td>
-                        </tr>
-                        </table>
-                        <tr>
-                            <td>
-                                <%request.getSession().setAttribute("producto", CTemp);%>
-                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button">Reservar</a></p>
-                                
-                            </td>
-                        </tr>
-                </li>
-                
-                <%
-                    }
-              }
-            }
-          %>  
-            </ul>        
-        </div>
+        
     </main>
                
 
