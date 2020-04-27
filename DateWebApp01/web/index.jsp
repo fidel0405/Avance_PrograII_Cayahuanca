@@ -38,14 +38,14 @@
             Usuario:<br> 
             <input type="text" name="user" class="datos" required />
             <br><br>
-            ContraseÃ±a: <br>
+            Contraseña: <br>
             <input type="password" name="password" class="datos" required />
             <br><br>
             <input type="submit" class="boton" value="Ingresar" />
             <input type="hidden" name="formid" value="1" />
             
             <br>
-            <p>Â¿No tienes cuenta? <a href="register.jsp">RegÃ­strate</a></p>
+            <p>¿No tienes cuenta? <a href="register.jsp">Regístrate</a></p>
             
         </form>
         <br><br>
@@ -63,7 +63,7 @@
 
                         <div class="row">
                             <a><i class="fab fa-facebook"></i></a>
-                            <label>SÃ­guenos en Facebook</label>
+                            <label>Síguenos en Facebook</label>
                         </div>
                         
                         <div class="row">
@@ -74,7 +74,7 @@
                         <h3>Servicios en:</h3>
                             <p>ESEN</p>
                             <p>San Miguel</p>
-                            <p>VÃ­a del Mar</p>
+                            <p>Vía del Mar</p>
                     </div>
 
                     
@@ -86,27 +86,27 @@
                         </div>
         
                         <div class="row">
-                            <label>AcrÃ­licos</label>
+                            <label>Acrílicos</label>
                         </div>
                         
                         <div class="row">
-                            <label>UÃ±as AcrÃ­licas</label>
+                            <label>Uñas Acrílicas</label>
                         </div>
 
                     </div>
 
                     <div class="column3">
-                        <h1>InformaciÃ³n</h1>
+                        <h1>Información</h1>
                         <div class="row">
                             <i class="fas fa-phone"></i>
-                            <label>NÃºmero de telÃ©fono</label>
+                            <label>Número de teléfono</label>
                             <br>
                             <p>+503 1234-5678<p>
                         </div>
                         
                         <div class="row">
                             <i class="fas fa-envelope"></i>
-                            <label>Correo ElectrÃ³nico</label>
+                            <label>Correo Electrónico</label>
                             <br>
                             <a href="mailto:asfa.nailed@gmail.com"><p>asfa.nailed@gmail.com</p></a>
                         </div>
@@ -126,7 +126,7 @@
 
                 <div class="information">
                     <br>
-                    <p>ASFA Nailed it! 2020 | DiseÃ±ado por Cayahuanca</p>
+                    <p>ASFA Nailed it! 2020 | Diseñado por Cayahuanca</p>
                     
             </div>
             </div>
