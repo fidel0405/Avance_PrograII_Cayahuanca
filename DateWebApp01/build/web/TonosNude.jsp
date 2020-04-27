@@ -40,7 +40,7 @@
         
         <main>
 
-        <div class="message">Acrílicos</div>
+        <div class="message">Acrí   licos</div>
 
         <br><br>
          
