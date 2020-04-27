@@ -93,12 +93,7 @@ public class UserServlet extends HttpServlet {
             
         }
         
-        String strClose = request.getParameter("close");
-        if (strClose.equals("1"))
-        {
-            request.getSession().invalidate();
-            response.sendRedirect("index.html");
-        }
+        
         
     }
 
