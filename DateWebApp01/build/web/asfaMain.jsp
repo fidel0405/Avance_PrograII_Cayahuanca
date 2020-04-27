@@ -9,17 +9,31 @@
         
         
         <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.html").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.html").forward(request, response);
+            }
                            
-        if(request.getSession(true)==null)
-            { response.sendRedirect("index.html");
-            }else{
-            UserObj CUser = 
+        UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<ServiceObj> CList = 
                 (List<ServiceObj>)request.getSession().getAttribute("services");
     %>
             
-
+        %>
         
         <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
@@ -42,13 +56,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick=""><a>Opciones</a>
-                            <ul class="desplegable">
-                                <li onclick=""><a href="profile.jsp">Perfil</a>
-                                <li onclick=""><a href="index.html">Cerrar sesión</a></li>
-                                
-                            </ul>
-                        </li>
+                        <li><a href="LogoutServlet">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
@@ -92,8 +100,7 @@
                         </table>
                         <tr>
                             <td>
-                                <%request.getSession().setAttribute("producto", CTemp);%>
-                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button">Reservar</a></p>
+                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button" name="<%= CTemp.getName() %>"  >Reservar</a></p>
                                 
                             </td>
                         </tr>
@@ -102,7 +109,6 @@
                 <%
                     }
               }
-            }
           %>  
             </ul>        
         </div>

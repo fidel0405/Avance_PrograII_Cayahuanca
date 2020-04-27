@@ -88,17 +88,12 @@ public class UserServlet extends HttpServlet {
             
             boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
             
-            request.getRequestDispatcher("index.html")
+            request.getRequestDispatcher("index.jsp")
                    .forward(request, response);
             
         }
         
-        //cerrar sesion
-        /*HttpSession sesion = request.getSession(true);
-        sesion.invalidate();
         
-        //Redirecciona  a index.html
-        response.sendRedirect("index.html");*/
         
     }
 

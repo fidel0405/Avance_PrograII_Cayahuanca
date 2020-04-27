@@ -6,6 +6,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.html").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.html").forward(request, response);
+            }
+        %>
         <title>ASFA Nailed it! | Uñas Acrílicas</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -35,7 +54,7 @@
                         <li onclick=""><a href="index.html">Opciones</a>
                             <ul class="desplegable">
                                 <li onclick=""><a href="index.html">Perfil</a>
-                                <li onclick=""><a href="index.html">Cerrar sesión</a></li>
+                                <li><a href="LogoutServlet">Cerrar sesión</a></li>
                                 
                             </ul>
                         </li>
