@@ -6,6 +6,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.html").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.html").forward(request, response);
+            }
+        %>
         <title>ASFA Nailed it! | Uñas Acrílicas</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -32,7 +51,13 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li onclick=""><a href="index.html">Opciones</a>
+                            <ul class="desplegable">
+                                <li onclick=""><a href="index.html">Perfil</a>
+                                <li><a href="LogoutServlet">Cerrar sesión</a></li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -36,6 +36,8 @@ body{
     margin-top: 7px;
 }
 
+
+
 .header a{
    
     color: white;
@@ -47,6 +49,10 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.navigation ul.desplegable{
+    display: none;
 }
 
     .navigation ul li{
@@ -66,7 +72,21 @@ body{
             background: gray;
             
             }
-
+            
+            .navigation ul li ul{
+                display: none;
+                position: absolute;
+                min-width: 140px;
+            }
+            
+            .navigation ul li:hover > ul{
+                display: inline-block;
+                background: rgb(24, 24, 24);
+                border-radius: 5px;
+                width: 145px;
+            }
+            
+            
 .logo-nav-container{
     display: flex;
     justify-content: space-between;

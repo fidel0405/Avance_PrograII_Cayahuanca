@@ -93,12 +93,7 @@ public class UserServlet extends HttpServlet {
             
         }
         
-        //cerrar sesion
-        /*HttpSession sesion = request.getSession(true);
-        sesion.invalidate();
         
-        //Redirecciona  a index.html
-        response.sendRedirect("index.html");*/
         
     }
 
