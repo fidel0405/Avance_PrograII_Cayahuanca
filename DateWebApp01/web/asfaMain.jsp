@@ -100,8 +100,7 @@
                         </table>
                         <tr>
                             <td>
-                                <%request.getSession().setAttribute("producto", CTemp);%>
-                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button">Reservar</a></p>
+                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button" name="<%= CTemp.getName() %>"  >Reservar</a></p>
                                 
                             </td>
                         </tr>

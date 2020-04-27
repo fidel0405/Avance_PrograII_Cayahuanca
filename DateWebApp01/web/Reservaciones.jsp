@@ -18,8 +18,7 @@
     <%
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        ServiceObj CServicio = 
-                (ServiceObj)request.getSession().getAttribute("producto");
+        String name = request.getParameter("name");
     %>
     <body>
         <header class="header">
@@ -41,7 +40,7 @@
         <h1>Reservas</h1>
         <br>
         <form id="myform" action="PersonServlet" method="get">
-            Nombre Completo:<%= CServicio.getName() %>;
+            Nombre Completo:<%= name %>;
             <br><br>
             <label for="Lugar">Escoge la fecha para tu reserva:</label>
             <select id="Fecha">
@@ -73,6 +72,7 @@
             <input type="submit" name="mysubmit" value="Reservar otros" />
                     </form>
          <br><br><br><br><br><br><br><br><br><br>
+         
         <footer>
             <div class="container-footer-all">
             
