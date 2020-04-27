@@ -15,6 +15,8 @@ public class LogoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
+        
+        //cerrar sesion
         HttpSession cerrar = request.getSession();
         cerrar.removeAttribute("logged_user");
         cerrar.invalidate();
