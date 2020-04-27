@@ -42,19 +42,15 @@
 
         <div class="message">Esmaltes</div>
 
-        <br><br>
+        <br>
          
         
          <div class="images">
-            <ul>
-                <!--Imagen 1-->
-
              
              
              
                 <!--Imagen 1-->
             <ul>
-
                 
                 <%
               if(CList!=null)
@@ -68,39 +64,28 @@
                 
                 
                 <li>
-                   
-                    
-                    
+   
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva">
+                    <table class="reserva" >
                         <tr>
-                            <td><p>
-                                <b><em><%= CTemp.getDescription() %></em></b>
-                            </p>
+                            <td>
+                                <p><b><em><%= CTemp.getDescription() %></em></b></p>
                             </td>
                         </tr>
+                        </table>
                         <tr>
                             <td>
                                 <p class="button-reserva"><a href="" class="button">Reservar</a></p>
                             </td>
                         </tr>
-                        
-                    </table>
-                    
                 </li>
                 
                 <%
                     }
               }
-
-          %>
-            </ul>
-  
-
-              
-                      
-
+          %>  
+            </ul>        
         </div>
     </main>
    
