@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>web/asfaMain.jsp</url>
+            <bookmark id="1">
+                <name/>
+                <line>16</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/logic/ServiceLogic.java</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/web/TonosNude.jsp</file>
-            <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/objects/ServiceObj.java</file>
+            <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/web/cataEsmaltes.html</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/servlets/UserServlet.java</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/web/MaquillajePermanente.jsp</file>
+            <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/web/Acrilicos.jsp</file>
             <file>file:/C:/Users/FIDEL/Documents/GitHub/Avance_PrograII_Cayahuanca/DateWebApp01/web/asfaMain.jsp</file>
-=======
-            <file>file:/C:/Users/cvill/Desktop/Progra%20II,%20proyecto%20GH/Avance_PrograII_Cayahuanca/DateWebApp01/web/index.html</file>
-            <file>file:/C:/Users/cvill/Desktop/Progra%20II,%20proyecto%20GH/Avance_PrograII_Cayahuanca/DateWebApp01/web/errorMessage.jsp</file>
-            <file>file:/C:/Users/cvill/Desktop/Progra%20II,%20proyecto%20GH/Avance_PrograII_Cayahuanca/DateWebApp01/src/java/com/datewebapp/servlets/UserServlet.java</file>
->>>>>>> 5ddcbc898ab71bb28ed7ba88752fcef3dd13c356
         </group>
     </open-files>
 </project-private>

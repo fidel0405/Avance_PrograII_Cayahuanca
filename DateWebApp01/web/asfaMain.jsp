@@ -42,7 +42,7 @@
 
         <div class="message">Nuestros Servicios</div>
 
-        <br><br>
+        <br>
          
         
          <div class="images">
@@ -61,7 +61,7 @@
                   {
                       CTemp = ite.next();
           %>
-                
+              
                 
                 <li>
    
@@ -76,7 +76,9 @@
                         </table>
                         <tr>
                             <td>
-                                <p class="button-reserva"><a href="" class="button">Reservar</a></p>
+                                <%request.getSession().setAttribute("producto", CTemp);%>
+                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button">Reservar</a></p>
+                                
                             </td>
                         </tr>
                 </li>
