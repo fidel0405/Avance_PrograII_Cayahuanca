@@ -10,14 +10,13 @@
         
         <%
                            
-        UserObj CUser = 
+        if(request.getSession(true)==null)
+            { response.sendRedirect("index.html");
+            }else{
+            UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<ServiceObj> CList = 
                 (List<ServiceObj>)request.getSession().getAttribute("services");
-        if(CUser.equals(null))
-            { request.getRequestDispatcher("index.html")
-                       .forward(request, response);
-            }else{
     %>
             
         %>
@@ -43,7 +42,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick="<% request.getSession().invalidate();%>"><a href="index.html">Cerrar sesión</a></li>
+                        <li onclick=""><a href="index.html">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
