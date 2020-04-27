@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it! | Uñas Acrílicas</title>
+        <title>ASFA Nailed it! | Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -18,8 +18,8 @@
     <%
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("acrilicos");
+        ServiceObj CServicio = 
+                (ServiceObj)request.getSession().getAttribute("producto");
     %>
     <body>
         <header class="header">
@@ -37,60 +37,43 @@
                 </nav>
             </div>
         </header>
-        
-        <main>
 
-        <div class="message">Uñas Acrílicas</div>
-
+        <h1>Reservas</h1>
         <br>
-         
-        
-         <div class="images">
-             
-             
-             
-                <!--Imagen 1-->
-            <ul>
-                
-                <%
-              if(CList!=null)
-              {
-                  Iterator<ServiceObj> ite = CList.iterator();
-                  ServiceObj CTemp;
-                  while(ite.hasNext())
-                  {
-                      CTemp = ite.next();
-          %>
-                
-                
-                <li>
-   
-                    <h1><%= CTemp.getName() %></h1>
-                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva" >
-                        <tr>
-                            <td>
-                                <p><b><em><%= CTemp.getDescription() %></em></b></p>
-                            </td>
-                        </tr>
-                        </table>
-                        <tr>
-                            <td>
-                                <p class="button-reserva"><a href="" class="button">Reservar</a></p>
-                            </td>
-                        </tr>
-                </li>
-                
-                <%
-                    }
-              }
-          %>  
-            </ul>        
-        </div>
-    </main>
-   
-
-          <footer>
+        <form id="myform" action="PersonServlet" method="get">
+            Nombre Completo:<%= CServicio.getName() %>;
+            <br><br>
+            <label for="Lugar">Escoge la fecha para tu reserva:</label>
+            <select id="Fecha">
+              <option value="Lunes1">Lunes: 10:00-12:00</option>
+              <option value="Lunes2">Lunes: 2:30-4:40</option>
+              <option value="Martes1">Martes: 8:00-10:00</option>
+              <option value="Martes2">Martes: 10:00-12:00</option>
+              <option value="Martes3">Martes: 1:00-2:30</option>
+              <option value="Miercoles1">Miercoles: 1:00-2:30</option>
+              <option value="Miercoles2">Martes: 2:30-4:40</option>
+              <option value="Jueves1">Jueves: 8:00-10:00</option>
+              <option value="Jueves2">Jueves: 10:00-12:00</option>
+              <option value="Jueves3">Jueves: 1:00-2:30</option>
+              <option value="Jueves4">Jueves:2:30-4:40</option>
+              <option value="Sabado1">Sabado: 8:00-10:00</option>
+              <option value="Sabado2">Sabado:10:00-12:00</option>
+              <option value="Via del Mar">Via del Mar</option>
+             </select>
+            <br><br>
+            <label for="Lugar">Escoge un lugar para tu reserva:</label>
+            <select id="Lugar">
+              <option value="ESEN">ESEN</option>
+              <option value="San Miguel">San Miguel</option>
+              <option value="Via del Mar">Via del Mar</option>
+             </select>
+            <br><br>
+            <input type="submit" name="mysubmit" value="Reservar" />
+            <br>
+            <input type="submit" name="mysubmit" value="Reservar otros" />
+                    </form>
+         <br><br><br><br><br><br><br><br><br><br>
+        <footer>
             <div class="container-footer-all">
             
                 <div class="container-body">
@@ -171,5 +154,5 @@
         
         
         </footer>
-    </body>
+    </body> 
 </html>

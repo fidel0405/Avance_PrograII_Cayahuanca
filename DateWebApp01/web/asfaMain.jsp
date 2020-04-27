@@ -6,6 +6,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        
+        <%
+                           
+        if(request.getSession(true)==null)
+            { response.sendRedirect("index.html");
+            }else{
+            UserObj CUser = 
+                (UserObj)request.getSession().getAttribute("logged_user");
+        List<ServiceObj> CList = 
+                (List<ServiceObj>)request.getSession().getAttribute("services");
+    %>
+            
+        %>
+        
         <title>ASFA Nailed it! | Inicio</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -15,12 +30,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <%
-        UserObj CUser = 
-                (UserObj)request.getSession().getAttribute("logged_user");
-        List<ServiceObj> CList = 
-                (List<ServiceObj>)request.getSession().getAttribute("services");
-    %>
+
     <body>
         <header class="header">
             <div class="container logo-nav-container">
@@ -32,7 +42,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li onclick=""><a href="index.html">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +52,7 @@
 
         <div class="message">Nuestros Servicios</div>
 
-        <br><br>
+        <br>
          
         
          <div class="images">
@@ -61,7 +71,7 @@
                   {
                       CTemp = ite.next();
           %>
-                
+              
                 
                 <li>
    
@@ -76,7 +86,9 @@
                         </table>
                         <tr>
                             <td>
-                                <p class="button-reserva"><a href="" class="button">Reservar</a></p>
+                                <%request.getSession().setAttribute("producto", CTemp);%>
+                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button">Reservar</a></p>
+                                
                             </td>
                         </tr>
                 </li>
@@ -84,11 +96,12 @@
                 <%
                     }
               }
+            }
           %>  
             </ul>        
         </div>
     </main>
-   
+               
 
           <footer>
             <div class="container-footer-all">
