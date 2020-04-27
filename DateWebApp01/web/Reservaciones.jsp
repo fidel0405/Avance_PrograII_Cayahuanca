@@ -31,7 +31,7 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="">Cerrar sesión</a></li>
+                        <li><a href="LogoutServlet">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
