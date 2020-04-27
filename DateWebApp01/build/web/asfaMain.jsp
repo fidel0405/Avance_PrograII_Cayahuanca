@@ -19,12 +19,12 @@
             {
                     if(session.getAttribute("logged_user")==null)
                             {
-                                    request.getRequestDispatcher("index.html").forward(request, response);
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
                             }
             }
             catch(Exception e)
             {
-                    request.getRequestDispatcher("index.html").forward(request, response);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
             }
                            
         UserObj CUser = 
@@ -56,7 +56,13 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="LogoutServlet">Cerrar sesión</a></li>
+                        <li onclick=""><a>Opciones</a>
+                            <ul class="desplegable">
+                                <li onclick=""><a href="profile.jsp">Perfil</a>
+                                <li><a href="LogoutServlet">Cerrar sesión</a></li>
+                                
+                            </ul>
+                        </li
                     </ul>
                 </nav>
             </div>

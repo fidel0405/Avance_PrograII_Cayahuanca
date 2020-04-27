@@ -51,9 +51,9 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick=""><a href="index.html">Opciones</a>
+                        <li onclick=""><a href="index.jsp">Opciones</a>
                             <ul class="desplegable">
-                                <li onclick=""><a href="index.html">Perfil</a>
+                                <li onclick=""><a href="index.jsp">Perfil</a>
                                 <li><a href="LogoutServlet">Cerrar sesión</a></li>
                                 
                             </ul>
