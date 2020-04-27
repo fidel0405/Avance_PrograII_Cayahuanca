@@ -17,12 +17,12 @@
             {
                     if(session.getAttribute("logged_user")==null)
                             {
-                                    request.getRequestDispatcher("index.html").forward(request, response);
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
                             }
             }
             catch(Exception e)
             {
-                    request.getRequestDispatcher("index.html").forward(request, response);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
             }
         %>
         <title>ASFA Nailed it! | Acrílicos</title>

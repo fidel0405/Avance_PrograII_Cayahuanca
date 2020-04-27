@@ -18,7 +18,7 @@ public class LogoutServlet extends HttpServlet {
         HttpSession cerrar = request.getSession();
         cerrar.removeAttribute("logged_user");
         cerrar.invalidate();
-        request.getRequestDispatcher("index.html").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
             
     }
 

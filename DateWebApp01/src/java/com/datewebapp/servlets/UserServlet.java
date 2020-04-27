@@ -88,7 +88,7 @@ public class UserServlet extends HttpServlet {
             
             boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
             
-            request.getRequestDispatcher("index.html")
+            request.getRequestDispatcher("index.jsp")
                    .forward(request, response);
             
         }
