@@ -63,14 +63,18 @@
             
             <img src="imagenes/<%=CUser.getPicture()%>">
             <form class="cmxform" id="signupForm" action="UserServlet" method="post" enctype="multipart/form-data">
-                <input type="text" name="idUser" value="<%=CUser.getId()%>"/>
+                 
                 <p>Cambiar foto</p>
+                <input type="hidden" name="idUser" value="<%=CUser.getId()%>"/>
                 <input type="file" name="fotoPerfil" id="fotoPerfil" value="Foto"/>
                 <input type="hidden" name="formid" value="4"/>
                 <input type="submit" value="cambiar"/>
+                                                  
             </form>
-            <h1>Nombre</h1>
+            <p>Nombre:</p>
+            <p><input type="text" value="<%=CUser.getName()%>" readonly="true"/></p>
             <p>Username</p>
+            <p><input type="text" value="<%=CUser.getUser()%>" readonly="true"/></p>
             <p><a href="LogoutServlet">Cerrar sesión</a></p>
 
         </div>

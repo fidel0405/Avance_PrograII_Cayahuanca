@@ -80,7 +80,7 @@
             <br><br>
             
             <p>Servicio:</p>
-            <input id="servicio" type="text" value="<%=ServiceActual.getName()%>"/>
+            <input id="servicio" type="text" value="<%=ServiceActual.getName()%>" readonly="true"/>
             
             <p>Indica la fecha de tu reserva</p>
             <input id="datepicker" name="datepicker" type="text"/>
