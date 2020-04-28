@@ -77,7 +77,7 @@ CREATE TABLE `usuariosweb`.`citas` (
 
 //Insertar Cita
 
-INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('1', '1', '1', '29/04/2020', '10:30', 'Esen', '73999514');
+INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('2', '1', '1', '30/10/2020', '12:00', 'Esen', '73999514');
 
 //Seleccionar historial de citas
 SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.id, usuariosweb.servicios.id, usuariosweb.citas.fecha, usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.name, usuariosweb.usuarios.name
