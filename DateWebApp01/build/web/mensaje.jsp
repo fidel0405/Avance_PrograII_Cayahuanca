@@ -54,7 +54,7 @@
         <h1>Tu recervación ha sido hecha correctamente</h1>
         <br>
         <br>
-        <h2>¿Desear enviar un mensaje de confirmación con los siguientes datos?</h2>
+        <h2>¿Desear enviar un mensaje de confirmación, por medio de Whatsapp con los siguientes datos?</h2>
         <br>
         <br>
         <form action="HistorialServlet">
