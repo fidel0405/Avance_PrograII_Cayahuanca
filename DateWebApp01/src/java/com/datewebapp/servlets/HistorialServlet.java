@@ -35,6 +35,7 @@ public class HistorialServlet extends HttpServlet {
                 (UserObj)request.getSession().getAttribute("logged_user");
 
             String strFormId = request.getParameter("formulario");
+            
             if(strFormId.equals("3")){
                 
                 ServiceObj ServiceActual = 
@@ -56,10 +57,17 @@ public class HistorialServlet extends HttpServlet {
                 strPlace=request.getParameter("lugar");
                 srtTelefono=request.getParameter("telefono");
                 
+                String service = ServiceActual.getName();
+                request.getSession().setAttribute("servicio", service);
+                request.getSession().setAttribute("fecha", strFecha);
+                request.getSession().setAttribute("hora", strTime);
+                request.getSession().setAttribute("place", strPlace);   
+                request.getSession().setAttribute("cell", srtTelefono);
+                
                 
                 boolean hasFailed = CHistorialLogic.insertDate(iId, iServiceId, iUserId, strFecha, strTime, strPlace, srtTelefono);
-
-                 request.getRequestDispatcher("asfaMain.jsp")
+                                
+                 request.getRequestDispatcher("mensaje.jsp")
                        .forward(request, response);
             }
             

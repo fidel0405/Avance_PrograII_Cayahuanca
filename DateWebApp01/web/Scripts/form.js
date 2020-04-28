@@ -1,10 +1,11 @@
+
 /* global request, response */
 
 document.querySelector("#mandar").addEventListener("click", e => {
   e.preventDefault();
 
   //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
-  let telefono = "50371503000";
+  let telefono = "50360052879";
 
   let servicio = document.querySelector("#servicio").value;
   let fecha = document.querySelector("#datepicker").value;
@@ -34,11 +35,9 @@ document.querySelector("#mandar").addEventListener("click", e => {
   }
   resp.classList.remove("fail");
   resp.classList.add("send");
+
   resp.innerHTML = `Se ha enviado tu reserva`;
   
-  request.getRequestDispatcher("HistorialServlet")
-                       .forward(request, response);
-
   window.open(url);
 });
 
