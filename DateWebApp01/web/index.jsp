@@ -13,14 +13,15 @@
         <title>Login Main</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
-        <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
         <link rel="stylesheet" href="CSS/estilosFormularios.css">
+        <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
     </head>
     <body>
-
+        
+    <section class="perfil">
         <br>
         <div align="center"> <img src="imagenes/logo.jpeg" alt="logo" id="logo"></div>
         
@@ -32,14 +33,16 @@
             <img src="imagenes/2_MP.jpeg" alt="prueba5">
             <img src="imagenes/2_TN.jpeg" alt="prueba6">
         </div>
+     
         
-        <div>
+        
+        <div class="inicio">
         <form action="UserServlet" class="formulario" id="logIn" method="post">
             
-            Usuario:<br> 
+            <h3>Usuario:</h3> 
             <input type="text" name="user" class="datos" required />
             <br><br>
-            Contraseña: <br>
+            <h3>Contraseña:</h3>
             <input type="password" name="password" class="datos" required />
             <br><br>
             <input type="submit" class="boton" value="Ingresar" />
@@ -52,7 +55,9 @@
         <br><br>
         
         </div>
-                
+    
+    </section> 
+        
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer>
             <div class="container-footer-all">
