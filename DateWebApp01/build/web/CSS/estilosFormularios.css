@@ -1,4 +1,9 @@
-.formulario{
+.section perfil{
+    background: #1f98a9;
+    padding-bottom: 5rem;
+}
+
+.section formulario{
     width: 400px;
     padding: 20px;
     margin: 20px;
@@ -8,8 +13,13 @@
     color: white;
     font-size: 18px;
     float: right;
-
 }
+
+.formulario input{
+    width: 200px;
+    height: 400px;
+}
+
 
 .boton{
     padding: 5px 7px 5px 5px;
@@ -62,6 +72,9 @@ body
     overflow: hidden;
 }
 
+.inicio form h3{
+    font-size: 4rem;
+}
 
 img
 {

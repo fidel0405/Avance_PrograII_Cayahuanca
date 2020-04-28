@@ -9,6 +9,10 @@ CREATE TABLE `usuariosweb`.`usuarios` (
   `user` VARCHAR(45) NOT NULL,
   `password` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`));
+  
+INSERT INTO usuariosweb.usuarios (id, name, lastname, age, email, user, password)
+VALUES(0,'name1','lastname1','20','user@gmail.com','user12','user123');
+  
 
 CREATE TABLE `usuariosweb`.`imagenes` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -61,7 +65,6 @@ INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_TN','Tonos Nude
  INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Color frensh','Esta nueva tendencia de frensh es furor en redes sociales. Una línea en todo el borde y lateral de las uñas es lo nuevo. Al aplicar acrílico cover nude y un poco de escarcha le logran efectos increíbles.','Acrilicos','5_A.jpeg',true);
  INSERT INTO usuariosweb.servicios(id,name,description,type,image,home) VALUES(0,'Color line','Esta es otra variente del clasico frensh. Una linea diagonal. La conbinacion de colores al gusto de cada persona le da un toque unico. El uso de acrilico cober como base es el secreto de estas tecnica.','Acrilicos','6_A.jpeg',true);
 
-//Tabla citas
 CREATE TABLE `usuariosweb`.`citas` (
   `idReservacion` INT NOT NULL AUTO_INCREMENT,
   `idProduct` INT NOT NULL,
@@ -75,16 +78,13 @@ CREATE TABLE `usuariosweb`.`citas` (
    FOREIGN KEY (`idUser`) references usuarios(id));
 
 
-//Insertar Cita
 
-INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('2', '1', '1', '30/10/2020', '12:00', 'Esen', '73999514');
+INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('1', '1', '1', '30/10/2020', '12:00', 'Esen', '73999514');
 
-//Seleccionar historial de citas
 SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.id, usuariosweb.servicios.id, usuariosweb.citas.fecha, usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.name, usuariosweb.usuarios.name
  FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.id=usuariosweb.citas.idUser
 inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.id;
 
-Cambios a la bd
 ALTER TABLE `usuariosweb`.`usuarios` 
 CHANGE COLUMN `id` `idUsuario` INT NOT NULL AUTO_INCREMENT ,
 CHANGE COLUMN `name` `usuario_name` VARCHAR(20) NOT NULL ;
@@ -93,13 +93,12 @@ ALTER TABLE `usuariosweb`.`servicios`
 CHANGE COLUMN `id` `idService` INT NOT NULL AUTO_INCREMENT ,
 CHANGE COLUMN `name` `service_name` VARCHAR(145) NOT NULL ;
 
-Consultar historial 
-SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.idUsuario, usuariosweb.servicios.idService, usuariosweb.citas.fecha, \n" +
-"usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.service_name, usuariosweb.usuarios.usuario_name\n" +
-" FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.idUsuario=usuariosweb.citas.idUser\n" +
-"inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.IdService\n" +
-"where usuariosweb.usuarios.idUsuario=1;
+ 
+SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.idUsuario, usuariosweb.servicios.idService, usuariosweb.citas.fecha,
+usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.service_name, usuariosweb.usuarios.usuario_name
+ FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.idUsuario=usuariosweb.citas.idUser
+inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.IdService
+where usuariosweb.usuarios.idUsuario=1;
 
-//profile picture
 ALTER TABLE `usuariosweb`.`usuarios` 
 ADD COLUMN `picture` VARCHAR(45) NOT NULL AFTER `password`;
