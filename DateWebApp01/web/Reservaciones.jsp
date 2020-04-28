@@ -45,6 +45,8 @@
         String strProductoId = request.getParameter("productoId");
         int intProductoId = Integer.parseInt(strProductoId);
         ServiceObj ServiceActual = CServiceLogic.getServicio(intProductoId);
+        
+        request.getSession().setAttribute("service acutal", ServiceActual);
 
     %>
     <body>
@@ -71,10 +73,6 @@
     
     <div class="form">
         <h1>Reservas</h1>
-<<<<<<< HEAD
-
-=======
->>>>>>> 80c0d6f67a420cf9b2a1cdfa9a5f7cb71b07044b
         <br>
                     
         <form action="HistorialyPerfil" >
@@ -105,6 +103,7 @@
 
                 <input type="summit" id="mandar" class="button" value="Reservar">
                 <a href="AsfaMain.jsp.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
+                <input type="hidden" name="formid" value="3" />
         </form>
 
         <script src="Scripts/form.js"></script>

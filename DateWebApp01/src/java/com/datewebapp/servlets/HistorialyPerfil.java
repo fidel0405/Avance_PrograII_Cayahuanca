@@ -4,6 +4,7 @@ import com.datewebapp.logic.HistorialLogic;
 import com.datewebapp.logic.ServiceLogic;
 import com.datewebapp.logic.UserLogic;
 import com.datewebapp.objects.HistorialObj;
+import com.datewebapp.objects.ServiceObj;
 import com.datewebapp.objects.UserObj;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -33,12 +34,39 @@ public class HistorialyPerfil extends HttpServlet {
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         
-            List<HistorialObj> HistorialList= CHistorialLogic.getHistorialList(CUser.getId());
+
             
-            request.getSession().setAttribute("historial", HistorialList);
+            String strFormId = request.getParameter("formid");
             
-            request.getRequestDispatcher("profile.jsp")
+            if(strFormId.equals("3")){
+                
+                ServiceObj ServiceActual = 
+                (ServiceObj)request.getSession().getAttribute("service actual");
+                
+                int iId;
+                int iUserId;
+                int iServiceId;
+                String strFecha;
+                String strTime;
+                String strPlace;
+                String srtTelefono;
+                
+                iId=0;
+                iUserId=CUser.getId();
+                iServiceId=ServiceActual.getId();
+                
+                
+                boolean hasFailed = CHistorialLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword, strPicture);
+                
+                
+            }
+            else{
+                            request.getRequestDispatcher("profile.jsp")
                        .forward(request, response);
+            }
+            
+            
+            
             
             
             

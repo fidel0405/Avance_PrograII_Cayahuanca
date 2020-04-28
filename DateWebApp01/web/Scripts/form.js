@@ -19,7 +19,7 @@ document.querySelector("#mandar").addEventListener("click", e => {
 		*Producto:*%0A
 		${servicio}%0A
 		*Fecha de reservación*%0A
-		${fecha}%0A
+		${fecha}%0A8
 		*Horario*%0A
 		${hora}%0A
 		*Lugar*%0A
@@ -32,7 +32,7 @@ document.querySelector("#mandar").addEventListener("click", e => {
   }
   resp.classList.remove("fail");
   resp.classList.add("send");
-  resp.innerHTML = `Se ha enviado tu reserva, ${servicio}`;
+  resp.innerHTML = `Se ha enviado tu reserva`;
 
   window.open(url);
 });
