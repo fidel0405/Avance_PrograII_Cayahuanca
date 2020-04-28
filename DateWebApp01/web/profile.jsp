@@ -64,18 +64,18 @@
             <img src="imagenes/<%=CUser.getPicture()%>">
             <form class="cmxform" id="signupForm" action="UserServlet" method="post" enctype="multipart/form-data">
                  
-                <p>Cambiar foto</p>
+                <p class="hov"><b>Cambiar foto</b></p>
                 <input type="hidden" name="idUser" value="<%=CUser.getId()%>"/>
-                <input type="file" name="fotoPerfil" id="fotoPerfil" value="Foto"/>
+                <input type="file" class="button-perfil" name="fotoPerfil" id="fotoPerfil" value="Foto"/>
                 <input type="hidden" name="formid" value="4"/>
-                <input type="submit" value="cambiar"/>
+                <input type="submit" class="button-perfil" value="cambiar"/>
                                                   
             </form>
-            <p>Nombre:</p>
-            <p><input type="text" value="<%=CUser.getName()%>" readonly="true"/></p>
-            <p>Username</p>
-            <p><input type="text" value="<%=CUser.getUser()%>" readonly="true"/></p>
-            <p><a href="LogoutServlet">Cerrar sesión</a></p>
+                <p class="hov"><b>Nombre:</b></p>
+            <p><input type="text" class="per" value="<%=CUser.getName()%>" readonly="true"/></p>
+            <p class="hov"><b>Username:</b></p>
+            <p><input type="text" class="per" value="<%=CUser.getUser()%>" readonly="true"/></p>
+            <p class="hov"><a class="hov" href="LogoutServlet"><b>Cerrar sesión</b></a></p>
 
         </div>
                 
