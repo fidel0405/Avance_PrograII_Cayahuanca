@@ -245,11 +245,35 @@ main{
     overflow: hidden;
 }
 
+.button-perfil{
+    border-color: #216170;
+    background: #113840;
+    color: #fff;
+    display: inline;
+    font-size: 0.75em;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 2px 0px #373c3c;
+    
+}
+
+
+
     .button:hover{
         box-shadow: 0px 0px 0px;
-        padding-top: 10px;
+        padding-top: 3px;
+    }
+    .button-perfil:hover{
+        box-shadow: 0px 0px 0px;
+        padding-top: 3px;
     }
 
+
+
+    
 .main-profile{
         overflow: hidden;
     }
@@ -279,22 +303,35 @@ main{
         transition: all 0.4s linear;
         border-radius: 5px;
     }
-    .datos h1:hover{
-        background: white;
-        
-    }
     
-    .datos p{
+    
+    .datos p.hov{
         padding-top: 9px;
         height: 30px;
         transition: all 0.4s linear;
         border-radius: 5px;
+        margin: 1px;
+        color: #022840;
+        margin-bottom: 0px;
     }
-    .datos p:hover{
+    .datos p.hov:hover{
         background: white;
-        
     }
     
+    .datos a.hov{
+        padding-top: 9px;
+        height: 30px;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 1px;
+        border-radius: 5px;
+        margin-top: 0px;
+        color: #022840;
+  
+    }
+    
+  
 
 .historial{
     text-align: center;
@@ -314,6 +351,28 @@ main{
     padding-right: 30px;
     padding-left: 30px;
 }
+
+.datos input.per{
+    font-family: serif;
+    width: 200px;
+    height: 30px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    margin: 2px;
+}
+
+.datos p.per{
+    width: 150px;
+    height: 30px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin: 2px;
+}
+
 
 .form h1{
     width: 500px;
@@ -351,13 +410,14 @@ main{
 }
 
 .form input.button-estilo{
-    width: 200px;
+    width: 210px;
     border-color: #216170;
-    background: #216170;
+    background: #003C4D;
     color: #fff;
-   
+    display: inline;
     font-size: 1.15em;
-    margin-top: 0px;
+    margin-left: 27%;
+    margin-top: 30px;
     margin-bottom: 5px;
     padding: 10px 0px;
     text-align: center;
@@ -370,9 +430,32 @@ main{
         box-shadow: 0px 0px 0px;
         padding-top: 10px;
     }
+    .form a{
+        text-decoration: none;
+    }
+    
+.form a input.button-est{
+    width: 205px;
+    height: 23px;
+    border-color: #216170;
+    background: #003C4D;
+    color: #fff;
+    display: inline;
+    font-size: 1.15em;
+    margin-left: 27%;
+    margin-top: 20px;    
+    margin-bottom: 5px;
+    padding: 7px 0px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 2px 2px #373c3c;
+    overflow: hidden;
+}
 
-
-
+.form input.button-est:hover{
+        box-shadow: 0px 0px 0px;
+        padding-top: 7px;
+    }
 .form select{
     margin-top: 0px;
     width: 400px;

@@ -9,6 +9,28 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+                           
+       
+    %>
+
     <head>
         <title>ASFA Nailed it! | Perfil</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
@@ -64,18 +86,18 @@
             <img src="imagenes/<%=CUser.getPicture()%>">
             <form class="cmxform" id="signupForm" action="UserServlet" method="post" enctype="multipart/form-data">
                  
-                <p>Cambiar foto</p>
+                <p class="hov"><b>Cambiar foto</b></p>
                 <input type="hidden" name="idUser" value="<%=CUser.getId()%>"/>
-                <input type="file" name="fotoPerfil" id="fotoPerfil" value="Foto"/>
+                <input type="file" class="button-perfil" name="fotoPerfil" id="fotoPerfil" value="Foto"/>
                 <input type="hidden" name="formid" value="4"/>
-                <input type="submit" value="cambiar"/>
+                <input type="submit" class="button-perfil" value="cambiar"/>
                                                   
             </form>
-            <p>Nombre:</p>
-            <p><input type="text" value="<%=CUser.getName()%>" readonly="true"/></p>
-            <p>Username</p>
-            <p><input type="text" value="<%=CUser.getUser()%>" readonly="true"/></p>
-            <p><a href="LogoutServlet">Cerrar sesión</a></p>
+                <p class="hov"><b>Nombre:</b></p>
+            <p><input type="text" class="per" value="<%=CUser.getName()%>" readonly="true"/></p>
+            <p class="hov"><b>Username:</b></p>
+            <p><input type="text" class="per" value="<%=CUser.getUser()%>" readonly="true"/></p>
+            <p class="hov"><a class="hov" href="LogoutServlet"><b>Cerrar sesión</b></a></p>
 
         </div>
                 

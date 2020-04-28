@@ -94,7 +94,7 @@
                 <li>
                     <form action="Reservaciones.jsp">
                     <h1><%= CTemp.getName() %></h1>
-                    <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
+                    <a href="<%= CTemp.getType() %>.jsp"> <img class="imagenes" src="imagenes/<%= CTemp.getImage() %>"></a>
                     <table class="reserva">
                         <tr>
                             <td>
@@ -203,5 +203,6 @@
         
         
         </footer>
+        <link rel="stylesheet" href="CSS/imagenes.css">
     </body>
 </html>
