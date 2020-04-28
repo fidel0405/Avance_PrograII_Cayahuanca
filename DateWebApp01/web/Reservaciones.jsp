@@ -34,7 +34,7 @@
     </head>
     <%
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -71,7 +71,6 @@
     
     <div class="form">
         <h1>Reservas</h1>
-<<<<<<< HEAD
         <br>
                     
         <form action="asfaMain.jsp" >
