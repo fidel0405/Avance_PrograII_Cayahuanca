@@ -59,7 +59,6 @@
                             <ul class="desplegable">
                                 <li onclick=""><a href="profile.jsp">Perfil</a>
                                 <li><a href="LogoutServlet">Cerrar sesión</a></li>
-                                
                             </ul>
                         </li>
                     </ul>

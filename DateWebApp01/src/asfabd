@@ -99,3 +99,7 @@ SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.idUsuario, usuarios
 " FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.idUsuario=usuariosweb.citas.idUser\n" +
 "inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.IdService\n" +
 "where usuariosweb.usuarios.idUsuario=1;
+
+//profile picture
+ALTER TABLE `usuariosweb`.`usuarios` 
+ADD COLUMN `picture` VARCHAR(45) NOT NULL AFTER `password`;
