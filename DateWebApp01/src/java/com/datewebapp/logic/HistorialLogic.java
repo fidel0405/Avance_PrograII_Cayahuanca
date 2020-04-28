@@ -19,7 +19,7 @@ public class HistorialLogic extends Logic
         super(connString);
     }
 
-    public List<HistorialObj> getHistorial() {
+    public List<HistorialObj> getHistorialList() {
         List<HistorialObj> HistorialList = null;
         DatabaseX CDatabase = getDatabase();
         String strSql = "SELECT * FROM usuariosweb.citas\n";
@@ -30,11 +30,9 @@ public class HistorialLogic extends Logic
         {
             try 
             {
-                int iId;
-                int iUserId;
-                String strName;
+                int iCitaId;
                 String strUserName;
-                String strService;
+                String strServiceName;
                 String strDate;
                 String strTime;
                 String strPlace;
@@ -44,11 +42,9 @@ public class HistorialLogic extends Logic
                 
                 while(CResult.next())
                 {
-                    iId = CResult.getInt("idproduct");
-                    iUserId = CResult.getInt("userid");
-                    strName = CResult.getString("name");
+                    iCitaId = CResult.getInt("idproduct");
                     strUserName = CResult.getString("username");
-                    strService = CResult.getString("servicio");
+                    strServiceName = CResult.getString("servicio");
                     strDate = CResult.getString("fecha");
                     strTime = CResult.getString("hora");
                     strPlace = CResult.getString("lugar");

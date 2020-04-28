@@ -67,8 +67,6 @@
         <h1>Reservas</h1>
         <br>
         
-            Nombre Completo:<%=ServiceActual.getName()%>;
-            Numero de Producto:<%=ServiceActual.getId()%>
             <br><br>
             
             <p>Fecha: <input type="text" id="datepicker"></p>
