@@ -23,7 +23,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Confirmación</title>
+         <link rel="shortcut icon" href="imagenes/Logo_2.png">
+        <link rel="stylesheet" href="CSS/estilosCatalogo.css">
+        <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+        <script src="scripts.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
     <%
@@ -50,11 +57,15 @@
        
 
     %>
-    <body>
-        <h1>Tu recervación ha sido hecha correctamente</h1>
+    <body class="men">
+     
+        <main>    
+        <div class="form">
+        
+        <h1>Tu reservación ha sido hecha correctamente</h1>
         <br>
         <br>
-        <h2>¿Desear enviar un mensaje de confirmación, por medio de Whatsapp con los siguientes datos?</h2>
+        <h3>¿Desear enviar un mensaje de confirmación, por medio de Whatsapp con los siguientes datos?</h3>
         <br>
         <br>
         <form action="HistorialServlet">
@@ -78,5 +89,8 @@
                 <a href="asfaMain.jsp"><input type="button" class="button" name="mysubmit" value="Cancelar"/></a>
         </form>
             <script src="Scripts/form.js"></script>
+        </div>
+            
+            </main>
     </body>
 </html>

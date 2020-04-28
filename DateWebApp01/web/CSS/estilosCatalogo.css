@@ -374,6 +374,7 @@ main{
 }
 
 
+
 .form h1{
     width: 500px;
     padding: 2rem;
@@ -396,11 +397,23 @@ main{
     color:  rgb(217, 250, 247);
     margin-bottom: 0px;
 }
+.form h3{
+    width: 500px;
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: #003C4D;
+    color: rgb(217, 250, 247);;
+}
 .form p{
     font-size: 1.5rem;
     color: rgb(217, 250, 247);
     
 }
+
+
 
 .form input{
     margin-top: 0px;
@@ -436,7 +449,7 @@ main{
     
 .form a input.button-est{
     width: 205px;
-    height: 23px;
+    height: 20px;
     border-color: #216170;
     background: #003C4D;
     color: #fff;
