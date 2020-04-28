@@ -1,3 +1,5 @@
+/* global request, response */
+
 document.querySelector("#mandar").addEventListener("click", e => {
   e.preventDefault();
 
@@ -33,6 +35,9 @@ document.querySelector("#mandar").addEventListener("click", e => {
   resp.classList.remove("fail");
   resp.classList.add("send");
   resp.innerHTML = `Se ha enviado tu reserva`;
+  
+  request.getRequestDispatcher("HistorialServlet")
+                       .forward(request, response);
 
   window.open(url);
 });
