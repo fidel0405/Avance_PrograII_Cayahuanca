@@ -89,12 +89,13 @@ public class UserObj
         m_strPassword = p_strPassword;
     }
     
-    private void setPicture(String p_strPicture) {
-        m_strPicture = p_strPicture;
-    }
 
     public String getPicture() {
         return m_strPicture;
      
+    }
+    
+    private void setPicture(String p_strPicture) {
+        m_strPicture = p_strPicture;
     }
 }
