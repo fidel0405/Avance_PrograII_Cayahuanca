@@ -85,7 +85,11 @@ ALTER TABLE `usuariosweb`.`servicios`
 CHANGE COLUMN `id` `idService` INT NOT NULL AUTO_INCREMENT ,
 CHANGE COLUMN `name` `service_name` VARCHAR(145) NOT NULL ;
 
+ALTER TABLE `usuariosweb`.`usuarios` 
+ADD COLUMN `picture` VARCHAR(45) NOT NULL AFTER `password`;
 
+
+//LOS SIGUIENTES CODIGOS NO DEBEN SER USADOS EN MYSQL WORKBEANCH
 
 INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('1', '1', '1', '30/10/2020', '12:00', 'Esen', '73999514');
 
@@ -93,9 +97,6 @@ SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.id, usuariosweb.ser
  FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.id=usuariosweb.citas.idUser
 inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.id;
 
-
-
- 
 SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.idUsuario, usuariosweb.servicios.idService, usuariosweb.citas.fecha,
 usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.service_name, usuariosweb.usuarios.usuario_name
  FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.idUsuario=usuariosweb.citas.idUser
