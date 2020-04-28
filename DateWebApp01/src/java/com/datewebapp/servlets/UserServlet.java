@@ -98,8 +98,9 @@ public class UserServlet extends HttpServlet {
             String strEmail = request.getParameter("email");
             String strUser = request.getParameter("user");
             String strPassword = request.getParameter("password");
+            String strPicture = "user.png";
             
-            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
+            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword, strPicture);
             
             request.getRequestDispatcher("index.jsp")
                    .forward(request, response);
