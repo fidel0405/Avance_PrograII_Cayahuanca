@@ -34,7 +34,7 @@ public class ServiceLogic extends Logic
                 int iId;
                 String strName;
                 String strDescription;
-                String srtType;
+                String strType;
                 String strImage;
                 
                 ServiceObj CTemp;
@@ -45,10 +45,10 @@ public class ServiceLogic extends Logic
                     iId = CResult.getInt("id");
                     strName = CResult.getString("name");
                     strDescription = CResult.getString("description");
-                    srtType = CResult.getString("type");
+                    strType = CResult.getString("type");
                     strImage = CResult.getString("image");
                     
-                    CTemp = new ServiceObj(iId, strName, strDescription, srtType, strImage);
+                    CTemp = new ServiceObj(iId, strName, strDescription, strType, strImage);
                     CList.add(CTemp);
                 }
             } 

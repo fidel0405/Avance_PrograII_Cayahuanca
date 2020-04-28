@@ -1,17 +1,14 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="com.datewebapp.objects.ServiceObj"%>
+<%@page import="com.datewebapp.objects.HistorialObj"%>
 <%@page import="com.datewebapp.objects.UserObj"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        
-  
-          
 
         
-        <title>ASFA Nailed it! | Inicio</title>
+        <title>ASFA Nailed it! | Perfil</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -21,10 +18,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
+    <%
+        UserObj CUser = 
+                (UserObj)request.getSession().getAttribute("logged_user");
+        List<HistorialObj> CList = 
+                (List<HistorialObj>)request.getSession().getAttribute("historial");
+    %>
+  
+    
     <body>
         <header class="header">
             <div class="container logo-nav-container">
-                <a href="" class="logo"><img src="imagenes/logo.jpeg" WIDTH=200px HEIGHT=75px  ></a>
+                <a href="" class="logo"><img src="imagenes/logo.jpeg" WIDTH=200px HEIGHT=75px></a>
                 <span class="menu-icon">Ver menú</span>
                 <nav class="navigation">
                     <ul>
@@ -56,7 +61,7 @@
         
 
         <div class="historial">
-            <h1>Historial</h1>
+            <h2>Historial</h2>
             <table cellspacing="0">
                 <tr>
                     <td><p><b>N°</b></p></td>
@@ -66,25 +71,33 @@
                     <td><p><b>Lugar</b></p></td>
                 </tr>
                 
-                <tr>
-                    <td><p>1</p></td>
-                    <td><p>Maquillaje Permanente</p></td>
-                    <td><p>11/05/2020</p></td>
-                    <td><p>11:00 a. m.</p></td>
-                    <td><p>ESEN</p></td>
-                </tr>
+                 <%
+              int n = 1;
+              
+              if(CList!=null)
+              {
+                  Iterator<HistorialObj> ite = CList.iterator();
+                  HistorialObj CTemp;
+                  while(ite.hasNext())
+                  {
+                      CTemp = ite.next();
+          %>
                 
                 <tr>
-                    <td><p>2</p></td>
-                    <td><p>Uñas Acrílicas</p></td>
-                    <td><p>20/05/2020</p></td>
-                    <td><p>8:00 a. m.</p></td>
-                    <td><p>Vía del mar</p></td>
+                    <td><p>1</p></td>
+                    <td><p><%= CTemp.getService() %></p></td>
+                    <td><p><%= CTemp.getFecha() %></p></td>
+                    <td><p><%= CTemp.getTime() %></p></td>
+                    <td><p><%= CTemp.getPlace() %></p></td>
                 </tr>
+                <%      n = n+ 1;
+                    }
+              }
+          %> 
                 
             </table>
         
-        
+         
         </div>
         
          

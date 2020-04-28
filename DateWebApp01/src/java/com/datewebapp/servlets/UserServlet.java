@@ -1,9 +1,11 @@
 package com.datewebapp.servlets;
 
+import com.datewebapp.logic.HistorialLogic;
 import com.datewebapp.logic.UserLogic;
 import com.datewebapp.logic.ServiceLogic;
 import com.datewebapp.objects.UserObj;
 import com.datewebapp.objects.ServiceObj;
+import com.datewebapp.objects.HistorialObj;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -26,6 +28,7 @@ public class UserServlet extends HttpServlet {
         
         UserLogic CLogic = new UserLogic(connString);
         ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        HistorialLogic CHistorialLogic = new HistorialLogic(connString);
         
         //en este servlet vamos a manejar el log in y el register de los usuarios
         //primero veremos el log in
@@ -50,12 +53,14 @@ public class UserServlet extends HttpServlet {
                 List<ServiceObj> EsmaltesList= CServiceLogic.getEsmaltes();
                 List<ServiceObj> TonosNudeList= CServiceLogic.getTonosNude();
                 List<ServiceObj> AcrilicosList= CServiceLogic.getAcrilicos();
+                List<HistorialObj> HistorialList= CHistorialLogic.getHistorial();
                 //log the user
                 request.getSession().setAttribute("logged_user", CLoginUser);
                 request.getSession().setAttribute("services", CList);
                 request.getSession().setAttribute("esmaltes", EsmaltesList);
                 request.getSession().setAttribute("tonosnude", TonosNudeList);
                 request.getSession().setAttribute("acrilicos", AcrilicosList);
+                request.getSession().setAttribute("historial", HistorialList);
                 
                 request.getRequestDispatcher("asfaMain.jsp")
                        .forward(request, response);
