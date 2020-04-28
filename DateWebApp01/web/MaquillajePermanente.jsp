@@ -204,5 +204,6 @@
         
         
         </footer>
+        <link rel="stylesheet" href="CSS/imagenes.css">
     </body>
 </html>
