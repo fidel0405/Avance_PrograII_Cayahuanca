@@ -68,7 +68,7 @@
         
         <main>
 
-        <div class="message">Esmaltes</div>
+        <div class="message">Nuestros Servicios</div>
 
         <br>
          

@@ -57,7 +57,7 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
-      out.write("        <title>ASFA Nailed it! | Formulario</title>\r\n");
+      out.write("        <title>ASFA Nailed it! | Esmaltes</title>\r\n");
       out.write("        <link rel=\"shortcut icon\" href=\"imagenes/Logo_2.png\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"CSS/estilosCatalogo.css\">\r\n");
       out.write("        <script defer src=\"http://use.fontawesome.com/releases/v5.12.1/js//all.js\"></script>\r\n");
@@ -84,7 +84,7 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    ");
 
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -115,20 +115,17 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("            </div>\r\n");
       out.write("        </header>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("    \r\n");
-      out.write("        \r\n");
-      out.write("    <main>    \r\n");
-      out.write("    \r\n");
-      out.write("    <div class=\"form\">\r\n");
       out.write("        <h1>Reservas</h1>\r\n");
       out.write("        <br>\r\n");
-      out.write("                    \r\n");
-      out.write("        <form action=\"asfaMain.jsp\" >\r\n");
-      out.write("\r\n");
-      out.write("        <form>\r\n");
-      out.write("\r\n");
       out.write("        \r\n");
+      out.write("        <form>\r\n");
+      out.write("        \r\n");
+      out.write("            <!-- Nombre Completo:");
+      out.print(ServiceActual.getName());
+      out.write(";\r\n");
+      out.write("            Numero de Producto:");
+      out.print(ServiceActual.getId());
+      out.write("-->\r\n");
       out.write("            <br><br>\r\n");
       out.write("            \r\n");
       out.write("            <p>Servicio:</p>\r\n");
@@ -149,21 +146,15 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                        <option value=\"Via del Mar\">Via del Mar</option>\r\n");
       out.write("                </select>\r\n");
       out.write("            <br><br>\r\n");
-      out.write("                        \r\n");
+      out.write("            \r\n");
       out.write("            <div id=\"respuesta\"></div>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("                <button id=\"mandar\" class=\"button\" >Reservar</button>\r\n");
-      out.write("                <input type=\"submit\" class=\"button\" name=\"mysubmit\" value=\"Reservar otros\" />\r\n");
-      out.write("\r\n");
-      out.write("                <button id=\"mandar\" class=\"button\">Reservar y enviar a whatsApp</button>\r\n");
+      out.write("                <button id=\"submit\">Enviar a WhatsApp</button>\r\n");
       out.write("                <input type=\"submit\" name=\"mysubmit\" value=\"Reservar otros\" />\r\n");
-      out.write("\r\n");
-      out.write("        </form>\r\n");
-      out.write("\r\n");
-      out.write("        <script src=\"Scripts/form.js\"></script>\r\n");
-      out.write(" </div>\r\n");
-      out.write("    </main>    \r\n");
+      out.write("              </form>\r\n");
+      out.write("            <script src=\"Scripts/form.js\"></script>\r\n");
+      out.write(" \r\n");
+      out.write("         <br><br><br><br><br><br><br><br><br><br>\r\n");
       out.write("         \r\n");
       out.write("        <footer>\r\n");
       out.write("            <div class=\"container-footer-all\">\r\n");
