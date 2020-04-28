@@ -10,8 +10,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        
         <title>ASFA Nailed it! | Perfil</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
@@ -29,14 +27,14 @@
         
         UserLogic CLogic = new UserLogic(connString);
         ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        HistorialLogic CHistorialLogic = new HistorialLogic(connString);
         
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        List<HistorialObj> CList = 
-                (List<HistorialObj>)request.getSession().getAttribute("historial");
+        
+        List<HistorialObj> CList= CHistorialLogic.getHistorialList(CUser.getId());
     %>
   
-    
     <body>
         <header class="header">
             <div class="container logo-nav-container">
@@ -50,7 +48,7 @@
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
                         <li onclick=""><a>Opciones</a>
                             <ul class="desplegable">
-                                <li onclick=""><a href="HistorialyPerfil">Perfil</a>
+                                <li onclick=""><a href="HistorialServlet">Perfil</a>
                                 <li onclick=""><a href="LogoutServlet">Cerrar sesión</a></li>
                             </ul>
                         </li>
@@ -76,9 +74,8 @@
             <p>Cerrar sesión</p>
 
         </div>
-        
-
-        <div class="historial">
+                
+            <div class="historial">
             <h2>Historial</h2>
             <table cellspacing="0">
                 <tr>
@@ -90,19 +87,19 @@
                 </tr>
                 
                  <%
-              int n = 1;
+                    int n = 1;
               
-              if(CList!=null)
-              {
-                  Iterator<HistorialObj> ite = CList.iterator();
-                  HistorialObj CTemp;
-                  while(ite.hasNext())
-                  {
-                      CTemp = ite.next();
+                    if(CList!=null)
+                    {
+                        Iterator<HistorialObj> ite = CList.iterator();
+                        HistorialObj CTemp;
+                        while(ite.hasNext())
+                        {
+                            CTemp = ite.next();
           %>
                 
                 <tr>
-                    <td><p>1</p></td>
+                    <td><p><%= n%></p></td>
                     <td><p><%= CTemp.getProductoName() %></p></td>
                     <td><p><%= CTemp.getFecha() %></p></td>
                     <td><p><%= CTemp.getTime() %></p></td>
