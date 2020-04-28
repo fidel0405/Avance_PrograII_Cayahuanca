@@ -132,7 +132,8 @@ public class UserServlet extends HttpServlet {
                 }
                 ous.close();
                 is.close();
-                
+            
+            //cambiar la imagen en la bd
             boolean hasfailed = CLogic.updatePicture(strFoto, iId);
             
             request.getRequestDispatcher("profile.jsp")

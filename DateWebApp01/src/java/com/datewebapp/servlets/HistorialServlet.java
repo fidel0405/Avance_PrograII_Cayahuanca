@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "HistorialyPerfil", urlPatterns = {"/HistorialyPerfil"})
-public class HistorialyPerfil extends HttpServlet {
+@WebServlet(name = "HistorialServlet", urlPatterns = {"/HistorialServlet"})
+public class HistorialServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -31,13 +31,8 @@ public class HistorialyPerfil extends HttpServlet {
         ServiceLogic CServiceLogic = new ServiceLogic(connString);
         HistorialLogic CHistorialLogic = new HistorialLogic(connString);
         
-        
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        
-        List<HistorialObj> HistorialList= CHistorialLogic.getHistorialList(CUser.getId());
-        
-        request.getSession().setAttribute("historial", HistorialList);
         
                 request.getRequestDispatcher("profile.jsp")
                        .forward(request, response);

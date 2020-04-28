@@ -66,19 +66,14 @@
                 </nav>
             </div>
         </header>
-
-
-    
-        
+  
     <main>    
     
     <div class="form">
         <h1>Reservas</h1>
         <br>
                     
-        
-
-        <form action="HistorialyPerfil" >
+        <form action="HistorialServlet" >
             <br><br>
             
             <p>Servicio:</p>
