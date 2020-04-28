@@ -1,35 +1,47 @@
-.section perfil{
+.section{
     background: #1f98a9;
     padding-bottom: 5rem;
+    
+}
+
+.inicio{
+    margin-left: 25%;
 }
 
 .section formulario{
     width: 400px;
     padding: 20px;
     margin: 20px;
-    margin-right: 160px;
+    margin-right: 100px;
     margin-top: 10px;
     font-family: 'courier';
     color: white;
-    font-size: 18px;
+    font-size: 10px;
     float: right;
 }
 
-.formulario input{
-    width: 200px;
+.inico formulario input{
+    width: 400px;
+    height: 400px;
+}
+
+.input{
+    width: 400px;
     height: 400px;
 }
 
 
 .boton{
+    margin-right: 30%;
     padding: 5px 7px 5px 5px;
+    margin-top: 40px;
     width: 100px;
     border-radius: 5px;
     font-size: 15px;
 }
 
 .boton:hover {
-    padding: 6px 8px 6px 6px;
+    padding: 4px 8px 6px 6px;
     width: 120px;
     border-radius: 5px;
     font-size: 15px;
@@ -72,8 +84,32 @@ body
     overflow: hidden;
 }
 
+.izquierda-register
+{
+    width: 500px;
+    padding: 17px;
+    margin: 20px;
+    margin-left: 130px;
+    margin-top: 50px;
+    font-family: 'courier';
+    color: white;
+    font-size: 18px;
+    float: left;
+    overflow: hidden;
+    height: 600px;
+}
+
 .inicio form h3{
-    font-size: 4rem;
+    font-size: 1.5rem;
+}
+
+.inicio form input.datos{
+    width: 300px;
+    height: 35px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin: 2px;
 }
 
 img

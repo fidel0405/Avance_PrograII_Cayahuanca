@@ -15,7 +15,7 @@
         <div align="center"> <img src="imagenes/logo.jpeg" alt="logo" id="logo"></div>
         
         <br>
-        <div class="izquierda">
+        <div class="izquierda-register">
             <img src="imagenes/1_A.jpeg" alt="prueba1">
             <img src="imagenes/1_MP.jpeg" alt="prueba2">
             <img src="imagenes/1_TN.jpeg" alt="prueba3">
@@ -24,9 +24,9 @@
             <img src="imagenes/2_TN.jpeg" alt="prueba6">
         </div>
         
-        <div>
+        <div class="inicio">
             <form action="UserServlet" class="formulario" id="register" method="post">
-            <legend align="center">Unete a nuestra gran familia</legend><br>
+                <legend align="center"><h2>Únete a nuestra gran familia</h2></legend><br>
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
             <br><br>
@@ -59,8 +59,7 @@
         
         </div>
         
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
         <footer>
             <div class="container-footer-all">
             

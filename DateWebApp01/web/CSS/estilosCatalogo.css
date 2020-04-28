@@ -311,8 +311,8 @@ main{
 }
 .historial table td{
     border: 1px solid black;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .form h1{
