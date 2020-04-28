@@ -5,6 +5,27 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+     <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+                           
+       
+    %>
     <head>
                
         <title>ASFA Nailed it! | Inicio</title>
@@ -71,22 +92,24 @@
               
                 
                 <li>
-   
+                    <form action="Reservaciones.jsp">
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva" >
+                    <table class="reserva">
                         <tr>
                             <td>
                                 <p><b><em><%= CTemp.getDescription() %></em></b></p>
+                                
                             </td>
                         </tr>
                         </table>
                         <tr>
                             <td>
-                                <p class="button-reserva"><a href="Reservaciones.jsp" class="button" name="<%= CTemp.getName() %>"  >Reservar</a></p>
-                                
+                                <input type="submit" class="button-reserva" value="Reservar" />
+                                <input type="hidden" name="productoId" value="<%= CTemp.getId() %>" />
                             </td>
                         </tr>
+                    </form>
                 </li>
                 
                 <%
