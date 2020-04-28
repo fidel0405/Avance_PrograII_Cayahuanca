@@ -31,8 +31,15 @@ public class HistorialyPerfil extends HttpServlet {
         ServiceLogic CServiceLogic = new ServiceLogic(connString);
         HistorialLogic CHistorialLogic = new HistorialLogic(connString);
         
+        
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
+        
+        List<HistorialObj> HistorialList= CHistorialLogic.getHistorialList(CUser.getId());
+        
+        request.getSession().setAttribute("historial", HistorialList);
+        
+
         
 request.getRequestDispatcher("profile.jsp")
                        .forward(request, response);
