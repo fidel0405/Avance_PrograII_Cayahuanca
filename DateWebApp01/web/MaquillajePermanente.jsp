@@ -106,7 +106,7 @@
                         </table>
                         <tr>
                             <td>
-                                <input type="submit" class="button-reserva" value="Reservar" />
+                                <input type="submit" class="button" value="Reservar" />
                                 <input type="hidden" name="productoId" value="<%= CTemp.getId() %>" />
                             </td>
                         </tr>
