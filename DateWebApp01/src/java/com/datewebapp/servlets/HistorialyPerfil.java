@@ -31,6 +31,8 @@ public class HistorialyPerfil extends HttpServlet {
         ServiceLogic CServiceLogic = new ServiceLogic(connString);
         HistorialLogic CHistorialLogic = new HistorialLogic(connString);
         
+        request.getRequestDispatcher("profile.jsp")
+                       .forward(request, response);
         
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
@@ -39,17 +41,12 @@ public class HistorialyPerfil extends HttpServlet {
         
         request.getSession().setAttribute("historial", HistorialList);
         
-
-        
-request.getRequestDispatcher("profile.jsp")
-                       .forward(request, response);
-            
-            String strFormId = request.getParameter("formid");
+            String strFormId = request.getParameter("formulario");
             
             if(strFormId.equals("3")){
                 
                 ServiceObj ServiceActual = 
-                (ServiceObj)request.getSession().getAttribute("service actual");
+                (ServiceObj)request.getSession().getAttribute("serviceacutal");
                 
                 int iId;
                 int iUserId;
