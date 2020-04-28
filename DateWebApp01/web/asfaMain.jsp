@@ -5,7 +5,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-     <%
+    <%
             response.setHeader("Pragma","no-cache");
             response.addHeader("Cache-control","must-revalidate");
             response.addHeader("Cache-control","no-cache");
@@ -26,9 +26,10 @@
                            
        
     %>
+
     <head>
-               
-        <title>ASFA Nailed it! | Inicio</title>
+        
+        <title>ASFA Nailed it! | Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -37,13 +38,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-     <%UserObj CUser = 
+    <%
+        UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<ServiceObj> CList = 
                 (List<ServiceObj>)request.getSession().getAttribute("services");
-     %>
-
-    
+    %>
+    <body>
         <header class="header">
             <div class="container logo-nav-container">
                 <a href="" class="logo"><img src="imagenes/logo.jpeg" WIDTH=200px HEIGHT=75px  ></a>
@@ -54,13 +55,13 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick=""><a>Opciones</a>
+                         <li onclick=""><a>Opciones</a>
                             <ul class="desplegable">
                                 <li onclick=""><a href="profile.jsp">Perfil</a>
                                 <li><a href="LogoutServlet">Cerrar sesión</a></li>
                                 
                             </ul>
-                        </li
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -68,7 +69,7 @@
         
         <main>
 
-        <div class="message">Nuestros Servicios</div>
+        <div class="message">Esmaltes</div>
 
         <br>
          
@@ -89,7 +90,7 @@
                   {
                       CTemp = ite.next();
           %>
-              
+                
                 
                 <li>
                     <form action="Reservaciones.jsp">
@@ -112,6 +113,7 @@
                     </form>
                 </li>
                 
+                
                 <%
                     }
               }
@@ -119,7 +121,7 @@
             </ul>        
         </div>
     </main>
-               
+   
 
           <footer>
             <div class="container-footer-all">
@@ -202,5 +204,5 @@
         
         
         </footer>
-    
+    </body>
 </html>

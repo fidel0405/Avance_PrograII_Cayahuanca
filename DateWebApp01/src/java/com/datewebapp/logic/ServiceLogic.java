@@ -42,8 +42,8 @@ public class ServiceLogic extends Logic
                 
                 while(CResult.next())
                 {
-                    iId = CResult.getInt("id");
-                    strName = CResult.getString("name");
+                    iId = CResult.getInt("idService");
+                    strName = CResult.getString("service_name");
                     strDescription = CResult.getString("description");
                     strType = CResult.getString("type");
                     strImage = CResult.getString("image");
@@ -125,8 +125,8 @@ public class ServiceLogic extends Logic
                 
                 while(CResult.next())
                 {
-                    iId = CResult.getInt("id");
-                    strName = CResult.getString("name");
+                    iId = CResult.getInt("idService");
+                    strName = CResult.getString("service_name");
                     strDescription = CResult.getString("description");
                     srtType = CResult.getString("type");
                     strImage = CResult.getString("image");
@@ -167,8 +167,8 @@ public class ServiceLogic extends Logic
                 
                 while(CResult.next())
                 {
-                    iId = CResult.getInt("id");
-                    strName = CResult.getString("name");
+                    iId = CResult.getInt("idService");
+                    strName = CResult.getString("service_name");
                     strDescription = CResult.getString("description");
                     srtType = CResult.getString("type");
                     strImage = CResult.getString("image");
@@ -190,7 +190,7 @@ public class ServiceLogic extends Logic
                 ServiceObj Servicio = null;
         DatabaseX CDatabase = getDatabase();
         String strSql = "select* from `usuariosweb`.`servicios`\n" +
-"where `usuariosweb`.`servicios`.id="+p_intId+";";
+"where `usuariosweb`.`servicios`.idService="+p_intId+";";
 
         ResultSet CResult = CDatabase.executeQuery(strSql);
         
