@@ -77,7 +77,7 @@ public class UserLogic extends Logic
         DatabaseX database = getDatabase();
         String strSql = "INSERT INTO usuariosweb.usuarios"
                 + "(idUsuario, usuario_name, lastname, age, email, user, password, picture)"
-                + "VALUES(0,'"+p_strName+"','"+p_strLastname+"','"+p_iAge+"','"+p_strEmail+"','"+p_strUser+"','"+p_strPassword+",'"+p_strPicture+"');";
+                + "VALUES(0,'"+p_strName+"','"+p_strLastname+"','"+p_iAge+"','"+p_strEmail+"','"+p_strUser+"','"+p_strPassword+"','"+p_strPicture+"');";
         hasFailed = database.executeNonQueryBool(strSql);
         return hasFailed;
     }
