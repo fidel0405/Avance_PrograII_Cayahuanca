@@ -22,11 +22,11 @@ public class HistorialLogic extends Logic
     public List<HistorialObj> getHistorialList(int p_intUser) {
         List<HistorialObj> HistorialList = null;
         DatabaseX CDatabase = getDatabase();
-        String strSql = "SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.id, usuariosweb.servicios.id, usuariosweb.citas.fecha, \n" +
-"usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.name, usuariosweb.usuarios.name\n" +
-" FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.id=usuariosweb.citas.idUser\n" +
-"inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.id\n" +
-"where usuariosweb.usuarios.id="+p_intUser+" ;";
+        String strSql = "SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.idUsuario, usuariosweb.servicios.idService, usuariosweb.citas.fecha, \n" +
+"usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.service_name, usuariosweb.usuarios.usuario_name\n" +
+" FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.idUsuario=usuariosweb.citas.idUser\n" +
+"inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.IdService\n" +
+"where usuariosweb.usuarios.idUsuario="+p_intUser+";";
 
         ResultSet CResult = CDatabase.executeQuery(strSql);
         

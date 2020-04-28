@@ -67,7 +67,7 @@
         <h1>Reservas</h1>
         <br>
                     
-        <form>
+        <form action="asfaMain.jsp" >
         
             <br><br>
             
@@ -90,9 +90,10 @@
                         
             <div id="respuesta"></div>
 
-                <button id="mandar">Reservar y enviar a whatsApp</button>
-                <input type="submit" name="mysubmit" value="Reservar otros" />
+                <button id="mandar" class="button" >Reservar</button>
+                <input type="submit" class="button" name="mysubmit" value="Reservar otros" />
         </form>
+
         <script src="Scripts/form.js"></script>
  
          <br><br><br><br><br><br><br><br><br><br>

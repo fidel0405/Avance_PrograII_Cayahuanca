@@ -9,6 +9,27 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+     <%
+            response.setHeader("Pragma","no-cache");
+            response.addHeader("Cache-control","must-revalidate");
+            response.addHeader("Cache-control","no-cache");
+            response.addHeader("Cache-control","no-store");
+            response.setDateHeader("Expires",0);
+
+            try
+            {
+                    if(session.getAttribute("logged_user")==null)
+                            {
+                                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                            }
+            }
+            catch(Exception e)
+            {
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+                           
+       
+    %>
     <head>
 
         
@@ -48,10 +69,10 @@
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li onclick=""><a href="index.html">Opciones</a>
+                            <li onclick=""><a>Opciones</a>
                             <ul class="desplegable">
                                 <li onclick=""><a href="profile.jsp">Perfil</a>
-                                <li onclick=""><a href="index.html">Cerrar sesión</a></li>
+                                <li><a href="LogoutServlet">Cerrar sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -59,15 +80,17 @@
             </div>
         </header>
         
+        
+        
     <main class="main-profile">
 
         <div class="datos">
             
             <img src="imagenes/user.png">
             <input type="file" id="fotoPerfil"/>
-            <h1>Nombre</h1>
-            <p>Username</p>
-            <p>Cerrar sesión</p>
+            <h1><%= CUser.getName()%></h1><h1><%= CUser.getLastname()%></h1>
+            <p><%= CUser.getUser()%></p>
+            <a href="LogoutServlet">Cerrar sesión</a>
 
         </div>
         
@@ -96,11 +119,11 @@
           %>
                 
                 <tr>
-                    <td><p>1</p></td>
-                    <td><p><%= CTemp.getProductoName() %></p></td>
-                    <td><p><%= CTemp.getFecha() %></p></td>
+                    <td><p><%=n%></p></td>
+                    <td><p><%= CTemp.getProductoName()%></p></td>
+                    <td><p><%= CTemp.getFecha()%></p></td>
                     <td><p><%= CTemp.getTime() %></p></td>
-                    <td><p><%= CTemp.getPlace() %></p></td>
+                    <td><p><%= CTemp.getPlace()%></p></td>
                 </tr>
                 <%      n = n+ 1;
                     }
