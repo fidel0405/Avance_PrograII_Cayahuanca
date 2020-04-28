@@ -94,22 +94,26 @@
                 
                 
                 <li>
-   
+                    <form action="Reservaciones.jsp">
                     <h1><%= CTemp.getName() %></h1>
                     <a href="<%= CTemp.getType() %>.jsp"> <img src="imagenes/<%= CTemp.getImage() %>"></a>
-                    <table class="reserva" >
+                    <table class="reserva">
                         <tr>
                             <td>
                                 <p><b><em><%= CTemp.getDescription() %></em></b></p>
+                                
                             </td>
                         </tr>
                         </table>
                         <tr>
                             <td>
-                                <p class="button-reserva"><a href="" class="button">Reservar</a></p>
+                                <input type="submit" class="button-reserva" value="Reservar" />
+                                <input type="hidden" name="productoId" value="<%= CTemp.getId() %>" />
                             </td>
                         </tr>
+                    </form>
                 </li>
+                
                 
                 <%
                     }

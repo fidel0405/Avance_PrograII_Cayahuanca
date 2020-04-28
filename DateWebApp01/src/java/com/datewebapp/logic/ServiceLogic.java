@@ -185,4 +185,42 @@ public class ServiceLogic extends Logic
         return AcrilicosList;
     }
     
+    public ServiceObj getServicio(int p_intId) {
+        
+                ServiceObj Servicio = null;
+        DatabaseX CDatabase = getDatabase();
+        String strSql = "select* from `usuariosweb`.`servicios`\n" +
+"where `usuariosweb`.`servicios`.id="+p_intId+";";
+
+        ResultSet CResult = CDatabase.executeQuery(strSql);
+        
+        if(CResult!=null)
+        {
+            try 
+            {
+                int iId;
+                String strName;
+                String strDescription;
+                String srtType;
+                String strImage;
+
+                while(CResult.next())
+                {
+                    iId = CResult.getInt("id");
+                    strName = CResult.getString("name");
+                    strDescription = CResult.getString("description");
+                    srtType = CResult.getString("type");
+                    strImage = CResult.getString("image");
+                    
+                    Servicio = new ServiceObj(iId, strName, strDescription, srtType, strImage);
+                    
+                }
+            } 
+            catch (SQLException ex) 
+            {
+                Logger.getLogger(UserLogic.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return Servicio;
+    }
 }
