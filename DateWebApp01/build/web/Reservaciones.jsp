@@ -67,26 +67,36 @@
         <h1>Reservas</h1>
         <br>
         
-            Nombre Completo:<%=ServiceActual.getName()%>;
-            Numero de Producto:<%=ServiceActual.getId()%>
+        <form>
+        
+            <!-- Nombre Completo:<%=ServiceActual.getName()%>;
+            Numero de Producto:<%=ServiceActual.getId()%>-->
             <br><br>
             
-            <p>Fecha: <input type="text" id="datepicker"></p>
-            <p>Hora: <input type="text" id="timepicker"></p>
+            <p>Servicio:</p>
+            <input id="servicio" type="text" value="<%=ServiceActual.getName()%>"/>
             
-            <label for="Lugar">Escoge un lugar para tu reserva:</label>
-            <select id="Lugar">
-              <option value="ESEN">ESEN</option>
-              <option value="San Miguel">San Miguel</option>
-              <option value="Via del Mar">Via del Mar</option>
-             </select>
+            <p>Indica la fecha de tu reserva</p>
+            <input id="datepicker" type="text"/>
+            
+            <p>Indica la hora de tu reserva</p>
+            <input id="timepicker" type="text"/>
+            
+            <p>Lugar</p>
+                <select id="lugar">
+                        <option value="ESEN">ESEN</option>
+                        <option value="San Miguel">San Miguel</option>
+                        <option value="Via del Mar">Via del Mar</option>
+                </select>
             <br><br>
-            <input type="submit" name="mysubmit" value="Reservar" />
-            <br>
-            <input type="submit" name="mysubmit" value="Reservar otros" />
+            
+            <div id="respuesta"></div>
 
-         
-        </form>
+                <button id="submit">Enviar a WhatsApp</button>
+                <input type="submit" name="mysubmit" value="Reservar otros" />
+              </form>
+            <script src="Scripts/form.js"></script>
+ 
          <br><br><br><br><br><br><br><br><br><br>
          
         <footer>
