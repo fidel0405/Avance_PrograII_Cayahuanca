@@ -206,8 +206,8 @@ public class ServiceLogic extends Logic
 
                 while(CResult.next())
                 {
-                    iId = CResult.getInt("idUsuario");
-                    strName = CResult.getString("usuario_name");
+                    iId = CResult.getInt("idService");
+                    strName = CResult.getString("service_name");
                     strDescription = CResult.getString("description");
                     srtType = CResult.getString("type");
                     strImage = CResult.getString("image");
