@@ -315,8 +315,14 @@ main{
     padding-left: 12px;
 }
 
+.form h1{
+    margin: auto;
+    background: #2A6B7A;
+    color: rgb(217, 250, 247);;
+}
+
 .form form{
-    width: 100%;
+    width: 500px;
     height: 100%;
     margin-left: 30%;
     background: #2A6B7A;

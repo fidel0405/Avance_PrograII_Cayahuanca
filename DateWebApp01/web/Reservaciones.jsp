@@ -71,7 +71,10 @@
     
     <div class="form">
         <h1>Reservas</h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80c0d6f67a420cf9b2a1cdfa9a5f7cb71b07044b
         <br>
                     
         <form action="HistorialyPerfil" >
