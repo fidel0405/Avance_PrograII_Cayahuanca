@@ -12,8 +12,8 @@ $( function() {
 $( function() {
                 $("#timepicker").timepicker({
                 timeFormat: 'h:mm p',
-                interval: 60,
-                minTime: '10',
+                interval: 30,
+                minTime: '10:00am',
                 maxTime: '6:00pm',
                 defaultTime: '11',
                 startTime: '10:00'
