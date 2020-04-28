@@ -106,7 +106,7 @@ public class UserServlet extends HttpServlet {
                    .forward(request, response);
             
         }
-        
+        /*
         Part fotoPerfil = request.getPart("fotoPerfil");
         String strFoto;
             //Guarda la imagen en el proyecto
@@ -127,7 +127,7 @@ public class UserServlet extends HttpServlet {
                 }
                 ous.close();
                 is.close();
-            }
+            }*/
         
         
         

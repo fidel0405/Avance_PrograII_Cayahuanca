@@ -90,7 +90,7 @@ public class UserObj
     }
     
     private void setPicture(String p_strPicture) {
-        m_strUser = p_strPicture;
+        m_strPicture = p_strPicture;
     }
 
     public String getPicture() {

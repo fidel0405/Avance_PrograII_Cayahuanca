@@ -63,7 +63,7 @@
 
         <div class="datos">
             
-            <img src="imagenes/<%=CUser.getPicture() %>">
+            <img src="imagenes/<%=CUser.getPicture()%>">
             <h1>Nombre</h1>
             <p>Username</p>
             <p>Cerrar sesión</p>
