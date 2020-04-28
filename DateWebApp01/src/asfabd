@@ -54,3 +54,17 @@ INSERT INTO usuariosweb.imagenes(id,name,tipo,image) VALUES(0,'6_TN','Tonos Nude
 //Insertar Cita
 
 INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`) VALUES ('1', '1', '1', '29/04/2020', '10:30', 'Esen', '73999514');
+
+//Seleccionar historial de citas
+SELECT usuariosweb.citas.idReservacion, usuariosweb.usuarios.id, usuariosweb.servicios.id, usuariosweb.citas.fecha, usuariosweb.citas.hora, usuariosweb.citas.lugar, usuariosweb.citas.telefono, usuariosweb.servicios.name, usuariosweb.usuarios.name
+ FROM usuariosweb.usuarios inner join usuariosweb.citas on usuariosweb.usuarios.id=usuariosweb.citas.idUser
+inner join usuariosweb.servicios on usuariosweb.citas.idProduct=usuariosweb.servicios.id;
+
+Cambios a la bd
+ALTER TABLE `usuariosweb`.`usuarios` 
+CHANGE COLUMN `id` `idUsuario` INT NOT NULL AUTO_INCREMENT ,
+CHANGE COLUMN `name` `usuario_name` VARCHAR(20) NOT NULL ;
+
+ALTER TABLE `usuariosweb`.`servicios` 
+CHANGE COLUMN `id` `idService` INT NOT NULL AUTO_INCREMENT ,
+CHANGE COLUMN `name` `service_name` VARCHAR(145) NOT NULL ;

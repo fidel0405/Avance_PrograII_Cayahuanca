@@ -53,7 +53,7 @@ public class UserServlet extends HttpServlet {
                 List<ServiceObj> EsmaltesList= CServiceLogic.getEsmaltes();
                 List<ServiceObj> TonosNudeList= CServiceLogic.getTonosNude();
                 List<ServiceObj> AcrilicosList= CServiceLogic.getAcrilicos();
-                List<HistorialObj> HistorialList= CHistorialLogic.getHistorial();
+                List<HistorialObj> HistorialList= CHistorialLogic.getHistorialList(CLoginUser.getId());
                 //log the user
                 request.getSession().setAttribute("logged_user", CLoginUser);
                 request.getSession().setAttribute("services", CList);
