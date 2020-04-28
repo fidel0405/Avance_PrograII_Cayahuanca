@@ -27,7 +27,7 @@ document.querySelector("#mandar").addEventListener("click", e => {
 
   if (servicio === "" || fecha === "" || hora === "") {
     resp.classList.add("fail");
-    resp.innerHTML = `Faltan algunos datos, ${servicio}`;
+    resp.innerHTML = `Faltan algunos datos`;
     return false;
   }
   resp.classList.remove("fail");

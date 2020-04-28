@@ -34,7 +34,7 @@
     </head>
     <%
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -71,10 +71,10 @@
     
     <div class="form">
         <h1>Reservas</h1>
-<<<<<<< HEAD
+
         <br>
                     
-        <form action="asfaMain.jsp" >
+        <form action="HistorialyPerfil" >
 
         <form>
 
@@ -101,12 +101,10 @@
             <div id="respuesta"></div>
 
 
-                <button id="mandar" class="button" >Reservar</button>
-                <input type="submit" class="button" name="mysubmit" value="Reservar otros" />
+                <input type="summit" id="mandar" class="button" value="Reservar">
+                <a href="Acrilicos.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
 
-                <button id="mandar" class="button">Reservar y enviar a whatsApp</button>
-                <input type="submit" name="mysubmit" value="Reservar otros" />
-
+                <input type="summit" id="mandar" class="button" value="Reservar y enviar a whatsApp">
         </form>
 
         <script src="Scripts/form.js"></script>

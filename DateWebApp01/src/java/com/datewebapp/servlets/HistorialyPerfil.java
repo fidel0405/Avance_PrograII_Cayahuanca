@@ -1,7 +1,13 @@
 package com.datewebapp.servlets;
 
+import com.datewebapp.logic.HistorialLogic;
+import com.datewebapp.logic.ServiceLogic;
+import com.datewebapp.logic.UserLogic;
+import com.datewebapp.objects.HistorialObj;
+import com.datewebapp.objects.UserObj;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +22,20 @@ public class HistorialyPerfil extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
+            String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
+                                + "user=root&password=root"+
+                                "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
+        
+        UserLogic CLogic = new UserLogic(connString);
+        ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        HistorialLogic CHistorialLogic = new HistorialLogic(connString);
+        
+        UserObj CUser = 
+                (UserObj)request.getSession().getAttribute("logged_user");
+        
+            List<HistorialObj> HistorialList= CHistorialLogic.getHistorialList(CUser.getId());
+            
+            request.getSession().setAttribute("historial", HistorialList);
             
             request.getRequestDispatcher("profile.jsp")
                        .forward(request, response);
