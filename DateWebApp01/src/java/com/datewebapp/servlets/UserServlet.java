@@ -106,9 +106,14 @@ public class UserServlet extends HttpServlet {
                    .forward(request, response);
             
         }
-        /*
+        
+        //guardar imagen y cambiar nombre de picture en la bd
+        if (strFormId.equals("4"))
+        {
         Part fotoPerfil = request.getPart("fotoPerfil");
         String strFoto;
+        String strId = request.getParameter("idUser");
+        int iId = Integer.parseInt(strId);
             //Guarda la imagen en el proyecto
             if (fotoPerfil.getSubmittedFileName().equals("")){
                 strFoto = "user.png";
@@ -127,8 +132,14 @@ public class UserServlet extends HttpServlet {
                 }
                 ous.close();
                 is.close();
-            }*/
-        
+                
+            boolean hasfailed = CLogic.updatePicture(strFoto, iId);
+            
+            request.getRequestDispatcher("profile.jsp")
+                       .forward(request, response);
+            }
+            
+        }
         
         
     }

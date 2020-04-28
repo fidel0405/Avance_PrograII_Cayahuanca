@@ -34,7 +34,8 @@ public class HistorialyPerfil extends HttpServlet {
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         
-
+request.getRequestDispatcher("profile.jsp")
+                       .forward(request, response);
             
             String strFormId = request.getParameter("formid");
             
@@ -54,12 +55,18 @@ public class HistorialyPerfil extends HttpServlet {
                 iId=0;
                 iUserId=CUser.getId();
                 iServiceId=ServiceActual.getId();
+                strFecha=request.getParameter("datepicker");
+                strTime=request.getParameter("timepicker");
+                strPlace=request.getParameter("lugar");
+                srtTelefono=request.getParameter("telefono");
                 
                 
-                boolean hasFailed = CHistorialLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword, strPicture);
-                
-                
+                boolean hasFailed = CHistorialLogic.insertDate(iId, iServiceId, iUserId, strFecha, strTime, strPlace, srtTelefono);
+
+                 request.getRequestDispatcher("profile.jsp")
+                       .forward(request, response);
             }
+            
             else{
                             request.getRequestDispatcher("profile.jsp")
                        .forward(request, response);
