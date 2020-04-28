@@ -41,6 +41,7 @@ public class UserLogic extends Logic
                String strEmail;
                String strUser;
                String strPassword;
+               String strPicture;
                
                
                while(CResult.next())
@@ -52,9 +53,10 @@ public class UserLogic extends Logic
                    strEmail = CResult.getString("email");
                    strUser = CResult.getString("user");
                    strPassword = CResult.getString("password");
+                   strPicture = CResult.getString("picture");
                    
                    //ahora que hemos capturado los datos solo necesitamos crear el objeto
-                   CUserInDB = new UserObj(iId, strName, strLastname, iAge, strEmail, strUser, strPassword);
+                   CUserInDB = new UserObj(iId, strName, strLastname, iAge, strEmail, strUser, strPassword, strPicture);
                    
                }
            } 

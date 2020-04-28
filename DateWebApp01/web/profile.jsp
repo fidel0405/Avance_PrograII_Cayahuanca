@@ -64,7 +64,7 @@
         <div class="datos">
             
             <img src="imagenes/user.png">
-            <input type="file" id="fotoPerfil"/>
+            <input type="file" id="fotoPerfil" name="fotoPerfil"/>
             <h1>Nombre</h1>
             <p>Username</p>
             <p>Cerrar sesión</p>

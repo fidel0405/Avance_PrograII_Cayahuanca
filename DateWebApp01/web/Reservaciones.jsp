@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASFA Nailed it! | Formulario</title>
+        <title>ASFA Nailed it! | Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -34,7 +34,7 @@
     </head>
     <%
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -64,15 +64,10 @@
             </div>
         </header>
 
-
-    
-        
-    <main>    
-    
-    <div class="form">
         <h1>Reservas</h1>
-        
-        <form>
+        <br>
+                    
+        <form action="asfaMain.jsp" >
         
             <br><br>
             
@@ -95,12 +90,13 @@
                         
             <div id="respuesta"></div>
 
-                <button id="mandar" class="button">Reservar y enviar a whatsApp</button>
-                <input type="submit" name="mysubmit" value="Reservar otros" />
+                <button id="mandar" class="button" >Reservar</button>
+                <input type="submit" class="button" name="mysubmit" value="Reservar otros" />
         </form>
+
         <script src="Scripts/form.js"></script>
- </div>
-    </main>    
+ 
+         <br><br><br><br><br><br><br><br><br><br>
          
         <footer>
             <div class="container-footer-all">
