@@ -34,7 +34,7 @@
     </head>
     <%
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -45,6 +45,8 @@
         String strProductoId = request.getParameter("productoId");
         int intProductoId = Integer.parseInt(strProductoId);
         ServiceObj ServiceActual = CServiceLogic.getServicio(intProductoId);
+        
+        request.getSession().setAttribute("service acutal", ServiceActual);
 
     %>
     <body>
@@ -71,10 +73,9 @@
     
     <div class="form">
         <h1>Reservas</h1>
-<<<<<<< HEAD
         <br>
                     
-        <form action="asfaMain.jsp" >
+        <form action="HistorialyPerfil" >
 
         <form>
 
@@ -85,28 +86,26 @@
             <input id="servicio" type="text" value="<%=ServiceActual.getName()%>"/>
             
             <p>Indica la fecha de tu reserva</p>
-            <input id="datepicker" type="text"/>
+            <input id="datepicker" name="datepicker" type="text"/>
             
             <p>Indica la hora de tu reserva</p>
-            <input id="timepicker" type="text"/>
+            <input id="timepicker" name="timepicker" type="text"/>
             
             <p>Lugar</p>
-                <select id="lugar">
+                <select id="lugar" name="lugar">
                         <option value="ESEN">ESEN</option>
                         <option value="San Miguel">San Miguel</option>
                         <option value="Via del Mar">Via del Mar</option>
                 </select>
             <br><br>
+            <p>Ingresa el numero de telefono de contacto</p>
+            <input id="telefono" name="telefono" type="text"/>
                         
             <div id="respuesta"></div>
 
-
-                <button id="mandar" class="button" >Reservar</button>
-                <input type="submit" class="button" name="mysubmit" value="Reservar otros" />
-
-                <button id="mandar" class="button">Reservar y enviar a whatsApp</button>
-                <input type="submit" name="mysubmit" value="Reservar otros" />
-
+                <input type="summit" id="mandar" class="button" value="Reservar">
+                <a href="AsfaMain.jsp.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
+                <input type="hidden" name="formid" value="3" />
         </form>
 
         <script src="Scripts/form.js"></script>

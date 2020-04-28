@@ -71,4 +71,13 @@ public class HistorialLogic extends Logic
         return HistorialList;
     }
 
+    public boolean insertDate(int iId, int iServiceId, int iUserId, String strFecha, String strTime, String strPlace, String srtTelefono) {
+        boolean hasFailed;
+        DatabaseX database = getDatabase();
+        String strSql = "INSERT INTO `usuariosweb`.`citas` (`idReservacion`, `idProduct`, `idUser`, `fecha`, `hora`, `lugar`, `telefono`)"
+                + "VALUES("+iId+",'"+iServiceId+"','"+iUserId+"','"+strFecha+"','"+strTime+"','"+strPlace+"','"+srtTelefono+"';";
+        hasFailed = database.executeNonQueryBool(strSql);
+        return hasFailed;
+    }
+
 }
