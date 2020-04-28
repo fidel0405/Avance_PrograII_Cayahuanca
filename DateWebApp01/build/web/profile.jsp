@@ -73,7 +73,7 @@
             </form>
             <h1>Nombre</h1>
             <p>Username</p>
-            <p>Cerrar sesión</p>
+            <p><a href="LogoutServlet">Cerrar sesión</a></p>
 
         </div>
         
