@@ -29,7 +29,7 @@
 
     <head>
         
-        <title>ASFA Nailed it! | Uñas Acrílicas</title>
+        <title>ASFA Nailed it! | Esmaltes</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -69,7 +69,7 @@
         
         <main>
 
-        <div class="message">Uñas Acrílicas</div>
+        <div class="message">Esmaltes</div>
 
         <br>
          

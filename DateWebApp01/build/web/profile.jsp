@@ -1,7 +1,11 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="com.datewebapp.objects.HistorialObj"%>
+<%@page import="com.datewebapp.objects.ServiceObj"%>
 <%@page import="com.datewebapp.objects.UserObj"%>
+<%@page import="com.datewebapp.objects.HistorialObj"%>
+<%@page import="com.datewebapp.logic.UserLogic"%>
+<%@page import="com.datewebapp.logic.ServiceLogic"%>
+<%@page import="com.datewebapp.logic.HistorialLogic"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,6 +23,13 @@
     </head>
 
     <%
+        String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
+                                + "user=root&password=root"+
+                                "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
+        
+        UserLogic CLogic = new UserLogic(connString);
+        ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         List<HistorialObj> CList = 
@@ -53,6 +64,7 @@
         <div class="datos">
             
             <img src="imagenes/user.png">
+            <input type="file" id="fotoPerfil"/>
             <h1>Nombre</h1>
             <p>Username</p>
             <p>Cerrar sesión</p>
@@ -85,7 +97,7 @@
                 
                 <tr>
                     <td><p>1</p></td>
-                    <td><p><%= CTemp.getService() %></p></td>
+                    <td><p><%= CTemp.getProductoName() %></p></td>
                     <td><p><%= CTemp.getFecha() %></p></td>
                     <td><p><%= CTemp.getTime() %></p></td>
                     <td><p><%= CTemp.getPlace() %></p></td>

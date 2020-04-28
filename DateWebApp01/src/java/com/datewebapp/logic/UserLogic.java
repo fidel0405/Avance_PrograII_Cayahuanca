@@ -45,8 +45,8 @@ public class UserLogic extends Logic
                
                while(CResult.next())
                {
-                   iId = CResult.getInt("id");
-                   strName = CResult.getString("name");
+                   iId = CResult.getInt("idUsuario");
+                   strName = CResult.getString("usuario_name");
                    strLastname = CResult.getString("lastname");
                    iAge = CResult.getInt("age");
                    strEmail = CResult.getString("email");
@@ -74,7 +74,7 @@ public class UserLogic extends Logic
         boolean hasFailed;
         DatabaseX database = getDatabase();
         String strSql = "INSERT INTO usuariosweb.usuarios"
-                + "(id, name, lastname, age, email, user, password) "
+                + "(idUsuario, usuario_name, lastname, age, email, user, password) "
                 + "VALUES(0,'"+p_strName+"','"+p_strLastname+"','"+p_iAge+"','"+p_strEmail+"','"+p_strUser+"','"+p_strPassword+"');";
         hasFailed = database.executeNonQueryBool(strSql);
         return hasFailed;

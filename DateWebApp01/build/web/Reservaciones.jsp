@@ -74,8 +74,6 @@
         
         <form>
         
-            <!-- Nombre Completo:<%=ServiceActual.getName()%>;
-            Numero de Producto:<%=ServiceActual.getId()%>-->
             <br><br>
             
             <p>Servicio:</p>
