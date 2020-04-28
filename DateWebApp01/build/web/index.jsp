@@ -12,6 +12,7 @@
     <head>
         <title>Login Main</title>
         <link rel="shortcut icon" href="imagenes/Logo_2.png">
+        <link rel="stylesheet" href="CSS/estilosFormularios.css">
         <link rel="stylesheet" href="CSS/estilosCatalogo.css">
         <link rel="stylesheet" href="CSS/estilosFormularios.css">
         <script defer src="http://use.fontawesome.com/releases/v5.12.1/js//all.js"></script>
@@ -57,8 +58,7 @@
         </div>
     
     </section> 
-        
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
         <footer>
             <div class="container-footer-all">
             
