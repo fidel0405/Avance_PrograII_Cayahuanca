@@ -6,13 +6,21 @@ import com.datewebapp.logic.ServiceLogic;
 import com.datewebapp.objects.UserObj;
 import com.datewebapp.objects.ServiceObj;
 import com.datewebapp.objects.HistorialObj;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+@MultipartConfig
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
 public class UserServlet extends HttpServlet {
@@ -23,7 +31,7 @@ public class UserServlet extends HttpServlet {
     {
         //conexion a la bd en la compu de carlos asfabd
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -90,13 +98,36 @@ public class UserServlet extends HttpServlet {
             String strEmail = request.getParameter("email");
             String strUser = request.getParameter("user");
             String strPassword = request.getParameter("password");
+            String strPicture = "user.png";
             
-            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword);
+            boolean hasFailed = CLogic.insertUser(strName, strLastname, iAge, strEmail, strUser, strPassword, strPicture);
             
             request.getRequestDispatcher("index.jsp")
                    .forward(request, response);
             
         }
+        
+        Part fotoPerfil = request.getPart("fotoPerfil");
+        String strFoto;
+            //Guarda la imagen en el proyecto
+            if (fotoPerfil.getSubmittedFileName().equals("")){
+                strFoto = "user.png";
+            } else {
+                ServletContext context = request.getServletContext();
+                String absolutePathToIndexJSP = context.getRealPath("/imagenes");
+                InputStream is = fotoPerfil.getInputStream();
+                strFoto = fotoPerfil.getSubmittedFileName();
+                File f = new File(absolutePathToIndexJSP+"/"+strFoto);
+                FileOutputStream ous = new FileOutputStream(f);
+                int dato = is.read();
+                while(dato!=-1)
+                {
+                    ous.write(dato);
+                    dato = is.read();
+                }
+                ous.close();
+                is.close();
+            }
         
         
         

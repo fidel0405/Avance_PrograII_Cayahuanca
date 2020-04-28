@@ -14,12 +14,13 @@ public class UserObj
     private String m_strEmail;
     private String m_strUser;
     private String m_strPassword;
+    private String m_strPicture;
     
     
     //constructor
 
     public UserObj(int p_iId, String p_strName, String p_strLastname, int p_iAge, 
-                    String p_strEmail, String p_strUser, String p_strPassword) 
+                    String p_strEmail, String p_strUser, String p_strPassword, String p_strPicture) 
     {
         setId(p_iId);
         setName(p_strName);
@@ -28,6 +29,7 @@ public class UserObj
         setEmail(p_strEmail);
         setUser(p_strUser);
         setPassword(p_strPassword);
+        setPicture(p_strPicture);
     }
 
     //getters and setters
@@ -86,5 +88,13 @@ public class UserObj
     private void setPassword(String p_strPassword) {
         m_strPassword = p_strPassword;
     }
+    
+    private void setPicture(String p_strPicture) {
+        m_strUser = p_strPicture;
+    }
+
+    public String getPicture() {
+        return m_strPicture;
      
+    }
 }
