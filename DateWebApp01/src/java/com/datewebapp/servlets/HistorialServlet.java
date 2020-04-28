@@ -33,10 +33,7 @@ public class HistorialServlet extends HttpServlet {
         
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        
-                request.getRequestDispatcher("profile.jsp")
-                       .forward(request, response);
-        
+
             String strFormId = request.getParameter("formulario");
             if(strFormId.equals("3")){
                 
@@ -62,12 +59,12 @@ public class HistorialServlet extends HttpServlet {
                 
                 boolean hasFailed = CHistorialLogic.insertDate(iId, iServiceId, iUserId, strFecha, strTime, strPlace, srtTelefono);
 
-                 request.getRequestDispatcher("profile.jsp")
+                 request.getRequestDispatcher("asfaMain.jsp")
                        .forward(request, response);
             }
             
             else{
-                            request.getRequestDispatcher("profile.jsp")
+                            request.getRequestDispatcher("asfaMain.jsp")
                        .forward(request, response);
             }
             

@@ -57,11 +57,14 @@
                 <span class="menu-icon">Ver menú</span>
                 <nav class="navigation">
                     <ul>
-                        <li><a href="asfaMain.jsp">Inicio</a></li>
+                      <li><a href="asfaMain.jsp">Inicio</a></li>
                         <li><a href="MaquillajePermanente.jsp">Esmaltes</a></li>
                         <li><a href="TonosNude.jsp">Acrílicos</a></li>
                         <li><a href="Acrilicos.jsp">Uñas Acrílicas</a></li>
-                        <li><a href="LogoutServlet">Cerrar sesión</a></li>
+                         <li onclick=""><a>Opciones</a>
+                            <ul class="desplegable">
+                                <li onclick=""><a href="profile.jsp">Perfil</a>
+                                <li><a href="LogoutServlet">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
