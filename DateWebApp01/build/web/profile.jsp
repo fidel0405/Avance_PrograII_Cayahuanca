@@ -51,7 +51,7 @@
                         <li onclick=""><a href="index.html">Opciones</a>
                             <ul class="desplegable">
                                 <li onclick=""><a href="HistorialyPerfil">Perfil</a>
-                                <li onclick=""><a href="index.html">Cerrar sesión</a></li>
+                                <li onclick=""><a href="LogoutServlet">Cerrar sesión</a></li>
                             </ul>
                         </li>
                     </ul>
