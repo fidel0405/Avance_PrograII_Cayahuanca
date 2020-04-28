@@ -34,7 +34,8 @@ public class HistorialyPerfil extends HttpServlet {
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
         
-
+request.getRequestDispatcher("profile.jsp")
+                       .forward(request, response);
             
             String strFormId = request.getParameter("formid");
             
