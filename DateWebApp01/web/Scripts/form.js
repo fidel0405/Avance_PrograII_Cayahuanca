@@ -1,4 +1,4 @@
-document.querySelector("#submit").addEventListener("click", e => {
+document.querySelector("#mandar").addEventListener("click", e => {
   e.preventDefault();
 
   //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
@@ -6,7 +6,7 @@ document.querySelector("#submit").addEventListener("click", e => {
 
   let servicio = document.querySelector("#servicio").value;
   let fecha = document.querySelector("#datepicker").value;
-  let hora = document.querySelector("#hora").value;
+  let hora = document.querySelector("#timepicker").value;
   let lugar = document.querySelector("#lugar").value;
   let resp = document.querySelector("#respuesta");
 

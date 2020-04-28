@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import com.datewebapp.objects.ServiceObj;
 import com.datewebapp.objects.UserObj;
+import com.datewebapp.logic.UserLogic;
+import com.datewebapp.logic.ServiceLogic;
 
 public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -50,6 +52,8 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
@@ -59,14 +63,39 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("        <script defer src=\"http://use.fontawesome.com/releases/v5.12.1/js//all.js\"></script>\r\n");
       out.write("        <script src=\"https://code.jquery.com/jquery-3.5.0.min.js\"></script>\r\n");
       out.write("        <script src=\"scripts.js\"></script>\r\n");
+      out.write("        \r\n");
+      out.write("        <!--Fuente del datepicker -->\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">\r\n");
+      out.write("        <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>\r\n");
+      out.write("        <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("        <!--Fuente del timepicker -->\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css\">\r\n");
+      out.write("        <script src=\"//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js\"></script>\r\n");
+      out.write("        \r\n");
+      out.write("        <!--Para date and time picker -->\r\n");
+      out.write("        <script src=\"Scripts/datetime.js\"></script>\r\n");
+      out.write("            \r\n");
+      out.write("        \r\n");
       out.write("        <meta charset=\"UTF-8\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
       out.write("    </head>\r\n");
       out.write("    ");
 
+        String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
+                                + "user=root&password=root"+
+                                "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
+        
+        UserLogic CLogic = new UserLogic(connString);
+        ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        String name = request.getParameter("name");
+        String strProductoId = request.getParameter("productoId");
+        int intProductoId = Integer.parseInt(strProductoId);
+        ServiceObj ServiceActual = CServiceLogic.getServicio(intProductoId);
+
     
       out.write("\r\n");
       out.write("    <body>\r\n");
@@ -88,42 +117,43 @@ public final class Reservaciones_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\r\n");
       out.write("        <h1>Reservas</h1>\r\n");
       out.write("        <br>\r\n");
-      out.write("        <form id=\"myform\" action=\"PersonServlet\" method=\"get\">\r\n");
-      out.write("            Nombre Completo:");
-      out.print( name );
+      out.write("        \r\n");
+      out.write("        <form>\r\n");
+      out.write("        \r\n");
+      out.write("            <!-- Nombre Completo:");
+      out.print(ServiceActual.getName());
       out.write(";\r\n");
+      out.write("            Numero de Producto:");
+      out.print(ServiceActual.getId());
+      out.write("-->\r\n");
       out.write("            <br><br>\r\n");
-      out.write("            <label for=\"Lugar\">Escoge la fecha para tu reserva:</label>\r\n");
-      out.write("            <select id=\"Fecha\">\r\n");
-      out.write("              <option value=\"Lunes1\">Lunes: 10:00-12:00</option>\r\n");
-      out.write("              <option value=\"Lunes2\">Lunes: 2:30-4:40</option>\r\n");
-      out.write("              <option value=\"Martes1\">Martes: 8:00-10:00</option>\r\n");
-      out.write("              <option value=\"Martes2\">Martes: 10:00-12:00</option>\r\n");
-      out.write("              <option value=\"Martes3\">Martes: 1:00-2:30</option>\r\n");
-      out.write("              <option value=\"Miercoles1\">Miercoles: 1:00-2:30</option>\r\n");
-      out.write("              <option value=\"Miercoles2\">Martes: 2:30-4:40</option>\r\n");
-      out.write("              <option value=\"Jueves1\">Jueves: 8:00-10:00</option>\r\n");
-      out.write("              <option value=\"Jueves2\">Jueves: 10:00-12:00</option>\r\n");
-      out.write("              <option value=\"Jueves3\">Jueves: 1:00-2:30</option>\r\n");
-      out.write("              <option value=\"Jueves4\">Jueves:2:30-4:40</option>\r\n");
-      out.write("              <option value=\"Sabado1\">Sabado: 8:00-10:00</option>\r\n");
-      out.write("              <option value=\"Sabado2\">Sabado:10:00-12:00</option>\r\n");
-      out.write("              <option value=\"Via del Mar\">Via del Mar</option>\r\n");
-      out.write("             </select>\r\n");
-      out.write("            <input type=\"time-picker\" id=\"hora\" name=\"hora\"\r\n");
-      out.write("                    min=\"09:00\" max=\"18:00\" required>\r\n");
+      out.write("            \r\n");
+      out.write("            <p>Servicio:</p>\r\n");
+      out.write("            <input id=\"servicio\" type=\"text\" value=\"");
+      out.print(ServiceActual.getName());
+      out.write("\"/>\r\n");
+      out.write("            \r\n");
+      out.write("            <p>Indica la fecha de tu reserva</p>\r\n");
+      out.write("            <input id=\"datepicker\" type=\"text\"/>\r\n");
+      out.write("            \r\n");
+      out.write("            <p>Indica la hora de tu reserva</p>\r\n");
+      out.write("            <input id=\"timepicker\" type=\"text\"/>\r\n");
+      out.write("            \r\n");
+      out.write("            <p>Lugar</p>\r\n");
+      out.write("                <select id=\"lugar\">\r\n");
+      out.write("                        <option value=\"ESEN\">ESEN</option>\r\n");
+      out.write("                        <option value=\"San Miguel\">San Miguel</option>\r\n");
+      out.write("                        <option value=\"Via del Mar\">Via del Mar</option>\r\n");
+      out.write("                </select>\r\n");
       out.write("            <br><br>\r\n");
-      out.write("            <label for=\"Lugar\">Escoge un lugar para tu reserva:</label>\r\n");
-      out.write("            <select id=\"Lugar\">\r\n");
-      out.write("              <option value=\"ESEN\">ESEN</option>\r\n");
-      out.write("              <option value=\"San Miguel\">San Miguel</option>\r\n");
-      out.write("              <option value=\"Via del Mar\">Via del Mar</option>\r\n");
-      out.write("             </select>\r\n");
-      out.write("            <br><br>\r\n");
-      out.write("            <input type=\"submit\" name=\"mysubmit\" value=\"Reservar\" />\r\n");
-      out.write("            <br>\r\n");
-      out.write("            <input type=\"submit\" name=\"mysubmit\" value=\"Reservar otros\" />\r\n");
-      out.write("                    </form>\r\n");
+      out.write("            \r\n");
+      out.write("            <div id=\"respuesta\"></div>\r\n");
+      out.write("\r\n");
+      out.write("                <button id=\"submit\">Enviar a WhatsApp</button>\r\n");
+      out.write("                <input type=\"submit\" name=\"mysubmit\" value=\"Reservar otros\" />\r\n");
+      out.write("              </form>\r\n");
+      out.write("            <script src=\"Scripts/form.js\"></script>\r\n");
+      out.write(" \r\n");
       out.write("         <br><br><br><br><br><br><br><br><br><br>\r\n");
       out.write("         \r\n");
       out.write("        <footer>\r\n");
