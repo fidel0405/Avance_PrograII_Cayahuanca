@@ -2,6 +2,8 @@
 <%@page import="java.util.List"%>
 <%@page import="com.datewebapp.objects.ServiceObj"%>
 <%@page import="com.datewebapp.objects.UserObj"%>
+<%@page import="com.datewebapp.logic.UserLogic"%>
+<%@page import="com.datewebapp.logic.ServiceLogic"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -31,9 +33,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <%
+        String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
+                                + "user=root&password=root"+
+                                "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
+        
+        UserLogic CLogic = new UserLogic(connString);
+        ServiceLogic CServiceLogic = new ServiceLogic(connString);
+        
         UserObj CUser = 
                 (UserObj)request.getSession().getAttribute("logged_user");
-        String name = request.getParameter("name");
+        String strProductoId = request.getParameter("productoId");
+        int intProductoId = Integer.parseInt(strProductoId);
+        ServiceObj ServiceActual = CServiceLogic.getServicio(intProductoId);
+
     %>
     <body>
         <header class="header">
@@ -54,8 +66,9 @@
 
         <h1>Reservas</h1>
         <br>
-        <form id="myform" action="PersonServlet" method="get">
-            Nombre Completo:<%= name %>;
+        
+            Nombre Completo:<%=ServiceActual.getName()%>;
+            Numero de Producto:<%=ServiceActual.getId()%>
             <br><br>
             
             <p>Fecha: <input type="text" id="datepicker"></p>
@@ -71,6 +84,7 @@
             <input type="submit" name="mysubmit" value="Reservar" />
             <br>
             <input type="submit" name="mysubmit" value="Reservar otros" />
+
          
         </form>
          <br><br><br><br><br><br><br><br><br><br>

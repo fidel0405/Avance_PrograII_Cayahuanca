@@ -29,22 +29,22 @@
             <legend align="center">Unete a nuestra gran familia</legend><br>
             Nombre:<br> 
             <input type="text" name="name" class="datos" required />
-            <br><br>
+            <br>
             Apellido:<br> 
             <input type="text" name="lastname" class="datos" required />
-            <br><br>
+            <br>
             Edad:<br> 
             <input type="number" name="age" class="datos" required />
-            <br><br>
+            <br>
             Correo:<br> 
             <input type="email" name="email" class="datos" required />
-            <br><br>
+            <br>
             user:<br> 
             <input type="text" name="user" class="datos" required />
-            <br><br>
+            <br>
             Contraseña: <br>
             <input type="password" name="password" class="datos" id="password" required />
-            <br><br>
+            <br>
             Confirmar contraseña: <br>
             <input type="password" name="confirm_password" class="datos" id="confirm_password" required />
             <br><br>
@@ -60,7 +60,7 @@
         </div>
         
         <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
         <footer>
             <div class="container-footer-all">
             
