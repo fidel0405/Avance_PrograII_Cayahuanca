@@ -34,7 +34,7 @@
     </head>
     <%
         String connString = "jdbc:mysql://localhost:3306/usuariosweb?"
-                                + "user=root&password=12345678B-"+
+                                + "user=root&password=root"+
                                 "&autoReconnect=true&useSSL=false&serverTimezone=UTC";
         
         UserLogic CLogic = new UserLogic(connString);
@@ -71,7 +71,6 @@
     
     <div class="form">
         <h1>Reservas</h1>
-<<<<<<< HEAD
         <br>
                     
         <form action="asfaMain.jsp" >
@@ -81,16 +80,16 @@
         
             <br><br>
             
-            <p>Servicio:</p>
+            <p><b>Servicio:</b></p>
             <input id="servicio" type="text" value="<%=ServiceActual.getName()%>"/>
             
-            <p>Indica la fecha de tu reserva</p>
+            <p><b>Fecha de reserva:</b></p>
             <input id="datepicker" type="text"/>
             
-            <p>Indica la hora de tu reserva</p>
+            <p><b>Hora de cita:</b></p>
             <input id="timepicker" type="text"/>
             
-            <p>Lugar</p>
+            <p><b>Lugar:</b></p>
                 <select id="lugar">
                         <option value="ESEN">ESEN</option>
                         <option value="San Miguel">San Miguel</option>

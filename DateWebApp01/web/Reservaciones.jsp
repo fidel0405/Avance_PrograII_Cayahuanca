@@ -80,16 +80,16 @@
         
             <br><br>
             
-            <p>Servicio:</p>
+            <p><b>Servicio:</b></p>
             <input id="servicio" type="text" value="<%=ServiceActual.getName()%>"/>
             
-            <p>Indica la fecha de tu reserva</p>
+            <p><b>Fecha de reserva:</b></p>
             <input id="datepicker" type="text"/>
             
-            <p>Indica la hora de tu reserva</p>
+            <p><b>Hora de cita:</b></p>
             <input id="timepicker" type="text"/>
             
-            <p>Lugar</p>
+            <p><b>Lugar:</b></p>
                 <select id="lugar">
                         <option value="ESEN">ESEN</option>
                         <option value="San Miguel">San Miguel</option>
