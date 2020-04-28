@@ -71,7 +71,10 @@
     
     <div class="form">
         <h1>Reservas</h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80c0d6f67a420cf9b2a1cdfa9a5f7cb71b07044b
         <br>
                     
         <form action="HistorialyPerfil" >
@@ -100,11 +103,8 @@
                         
             <div id="respuesta"></div>
 
-
                 <input type="summit" id="mandar" class="button" value="Reservar">
-                <a href="Acrilicos.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
-
-                <input type="summit" id="mandar" class="button" value="Reservar y enviar a whatsApp">
+                <a href="AsfaMain.jsp.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
         </form>
 
         <script src="Scripts/form.js"></script>

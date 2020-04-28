@@ -103,11 +103,8 @@
                         
             <div id="respuesta"></div>
 
-
                 <input type="summit" id="mandar" class="button" value="Reservar">
-                <a href="Acrilicos.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
-
-                <input type="summit" id="mandar" class="button" value="Reservar y enviar a whatsApp">
+                <a href="AsfaMain.jsp.jsp"><input class="button" name="mysubmit" value="Reservar otros" /></a>
         </form>
 
         <script src="Scripts/form.js"></script>
