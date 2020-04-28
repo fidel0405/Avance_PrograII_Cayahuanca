@@ -189,6 +189,7 @@ main{
     height: 200px
 }
 
+
 .button-reserva a{
     text-decoration: none;
     justify-content: center;
@@ -230,6 +231,7 @@ main{
 
 
 .button{
+    border-color: #216170;
     background: #216170;
     color: #fff;
     display: inline-block;
@@ -239,7 +241,7 @@ main{
     padding: 10px 0px;
     text-align: center;
     width: 200px;
-    box-shadow: 0px 3px 0px #373c3c;
+    box-shadow: 0px 2px 0px #373c3c;
     overflow: hidden;
 }
 

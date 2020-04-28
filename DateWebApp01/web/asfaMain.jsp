@@ -43,7 +43,7 @@
                 (List<ServiceObj>)request.getSession().getAttribute("services");
      %>
 
-    <body>
+    
         <header class="header">
             <div class="container logo-nav-container">
                 <a href="" class="logo"><img src="imagenes/logo.jpeg" WIDTH=200px HEIGHT=75px  ></a>
@@ -105,7 +105,7 @@
                         </table>
                         <tr>
                             <td>
-                                <input type="submit" class="button-reserva" value="Reservar" />
+                                <input type="submit" class="button" value="Reservar" />
                                 <input type="hidden" name="productoId" value="<%= CTemp.getId() %>" />
                             </td>
                         </tr>
@@ -202,5 +202,5 @@
         
         
         </footer>
-    </body>
+    
 </html>
