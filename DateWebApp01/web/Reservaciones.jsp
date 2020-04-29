@@ -123,7 +123,7 @@
             <div id="respuesta"></div>
 
             <input type="submit" id="enviar" class="button-estilo" value="Reservar" onclick="alert('Gracias por reservar')">
-                <a href="asfaMain"><input class="button-est" name="mysubmit" value="Reservar otros" /></a>
+                <a href="asfaMain.jsp"><input class="button-est" name="mysubmit" value="Reservar otros" /></a>
                 <input type="hidden" id="formulario" name="formulario" value="3" />
         </form>
 
